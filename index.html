@@ -353,7 +353,8 @@
       font-family: var(--font-display);
       font-size: var(--text-lg);
       font-weight: 700;
-      color: rgba(255,255,255,0.8);
+      font-style: italic;
+      color: #ffffff;
       margin-bottom: 0.15rem;
       letter-spacing: 0.02em;
     }
@@ -369,7 +370,7 @@
       font-family: var(--font-display);
       font-size: var(--text-2xl);
       font-weight: 700;
-      color: #ffffff;
+      color: #9BA4B4;
       line-height: 1.1;
     }
 
@@ -388,9 +389,10 @@
 
     .hero .subtitle {
       font-size: var(--text-lg);
-      color: rgba(255,255,255,0.7);
+      color: #9BA4B4;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       margin-top: 0.25rem;
     }
 
@@ -1118,7 +1120,7 @@
   <section id="contact" class="cta-banner" aria-labelledby="cta-heading">
     <h2 id="cta-heading">Courts. Budgets. Records. Elections.</h2>
     <p>Done right.</p>
-    <a href="mailto:info@grahamforblaine.com" class="btn-primary">Get in Touch: info@grahamforblaine.com</a>
+    <a href="/cdn-cgi/l/email-protection#7b12151d143b1c091a131a161d140919171a12151e55181416" class="btn-primary">Get in Touch: <span class="__cf_email__" data-cfemail="71181f171e3116031019101c171e03131d10181f145f121e1c">[email&#160;protected]</span></a>
   </section>
 
 </main>
@@ -1134,7 +1136,7 @@
 </footer>
 
 <!-- ===== Mobile Nav Toggle Script ===== -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   (function () {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.nav-links');
@@ -1158,14 +1160,4 @@
     });
 
     document.addEventListener('click', function (e) {
-      if (nav.classList.contains('is-open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('is-open');
-        toggle.textContent = 'Menu';
-      }
-    });
-  })();
-</script>
-
-</body>
-</html>
+      if (nav.classList.contains('i
