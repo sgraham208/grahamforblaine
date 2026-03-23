@@ -4,136 +4,888 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Graham — Secretario del Condado de Blaine</title>
-  <meta name="description" content="Stephen Graham para Secretario del Condado de Blaine. Elecciones justas. Presupuestos honestos." />
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Stephen Graham para Secretario del Condado de Blaine. Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta property="og:title" content="Graham para Secretario del Condado de Blaine" />
+  <meta property="og:description" content="Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta property="og:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grahamforblaine.com/es" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Graham para Secretario del Condado de Blaine" />
+  <meta name="twitter:description" content="Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta name="twitter:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
+    /* ===== CSS Custom Properties ===== */
     :root {
-      --color-navy: #1B2A4A;
-      --color-gold: #C8953D;
-      --color-cream: #FAF8F5;
-      --color-text: #2C2C2C;
-      --color-white: #FFFFFF;
-      --font-display: 'Merriweather', Georgia, serif;
-      --font-body: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+      --color-navy: #1a2744;
+      --color-navy-light: #243456;
+      --color-blue: #2e5c8a;
+      --color-blue-light: #3d7ab8;
+      --color-sky: #5a9fd4;
+      --color-sand: #f5f0e8;
+      --color-sand-dark: #e8e0d0;
+      --color-cream: #faf8f4;
+      --color-white: #ffffff;
+      --color-text: #2c2c2c;
+      --color-text-muted: #5a5a5a;
+      --color-text-light: #8a8a8a;
+      --color-accent: #b8860b;
+      --color-accent-light: #d4a017;
+      --color-red: #c0392b;
+
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2.5rem;
+      --space-xl: 4rem;
+      --space-2xl: 6rem;
+
+      --font-display: 'Montserrat', 'Segoe UI', sans-serif;
+      --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+      --text-base: 1rem;
+      --text-sm: 0.9rem;
+      --text-lg: 1.15rem;
+      --text-xl: 1.5rem;
+      --text-2xl: 2rem;
+      --text-3xl: 2.75rem;
+      --text-4xl: 3.5rem;
+
+      --max-width: 72rem;
+      --max-width-narrow: 48rem;
+      --border-radius: 0.375rem;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ===== Dark mode ===== */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-cream: #1a1a1a;
+        --color-sand: #242424;
+        --color-sand-dark: #2a2a2a;
+        --color-white: #1e1e1e;
+        --color-text: #e8e4dc;
+        --color-text-muted: #c4bab0;
+        --color-text-light: #a89e94;
+        --color-navy: #0f1825;
+        --color-navy-light: #182238;
+        --color-blue: #5a9fd4;
+        --color-blue-light: #7bb8e3;
+      }
+    }
+
+    /* Dark mode component overrides placeholder — populated after component rules */
+
+    /* ===== Reduced motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+      }
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 100%;
+    }
 
     body {
       font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
       color: var(--color-text);
-      background: var(--color-cream);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      background-color: var(--color-cream);
       -webkit-font-smoothing: antialiased;
     }
 
-    .header {
-      background: var(--color-navy);
-      border-bottom: 3px solid var(--color-gold);
-      padding: 0.75rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .header img {
-      height: 36px;
-      width: auto;
+    a {
+      color: var(--color-blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
+      transition: color 0.2s ease;
+    }
+    a:hover { color: var(--color-blue-light); }
+
+    a:focus-visible {
+      outline: 3px solid var(--color-blue);
+      outline-offset: 3px;
+      border-radius: 2px;
     }
 
-    .header a {
-      color: var(--color-white);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .lang-switch {
-      color: var(--color-gold);
-      border: 1px solid var(--color-gold);
-      padding: 0.25rem 0.625rem;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9375rem;
-    }
-
-    .lang-switch:hover {
-      background: var(--color-gold);
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      line-height: 1.2;
       color: var(--color-navy);
     }
 
-    .lang-switch:focus-visible {
-      outline: 3px solid var(--color-gold);
+    @media (prefers-color-scheme: dark) {
+      h1, h2, h3, h4 { color: #e0d8cc; }
+    }
+
+    /* ===== Skip Link ===== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-sm);
+      background: var(--color-navy);
+      color: #ffffff;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      z-index: 1000;
+      text-decoration: underline;
+    }
+    .skip-link:focus {
+      top: var(--space-sm);
+      color: #ffffff;
+      outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
 
-    main {
-      flex: 1;
+    /* ===== Site Header / Nav ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--color-navy);
+      padding: var(--space-xs) var(--space-sm);
+    }
+
+    .site-header nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-xs);
+    }
+
+    .site-header .logo-link {
+      display: flex;
+      align-items: center;
+    }
+    .site-header .logo-link img {
+      height: 2.5rem;
+      width: auto;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: rgba(255,255,255,0.85);
+      padding: var(--space-xs) 0.75rem;
+      font-size: var(--text-sm);
+      font-family: var(--font-body);
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: var(--border-radius);
+      min-width: 44px;
+      min-height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2rem 1rem;
     }
 
-    .content {
-      max-width: 36rem;
-      text-align: center;
+    .nav-toggle:focus-visible {
+      outline: 3px solid var(--color-sky);
+      outline-offset: 2px;
     }
 
-    .content h1 {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      color: var(--color-navy);
-      margin-bottom: 1rem;
-      line-height: 1.3;
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: var(--space-md);
+      align-items: center;
     }
 
-    .content p {
-      font-size: 1.125rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .content a {
-      color: var(--color-navy);
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: var(--text-sm);
       font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: var(--space-xs);
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover { color: #ffffff; }
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--color-sky);
+      outline-offset: 3px;
     }
 
-    .footer {
-      background: var(--color-navy);
-      color: rgba(255,255,255,0.6);
+    .lang-toggle {
+      font-size: var(--text-sm);
+      background: rgba(255,255,255,0.12);
+      border-radius: var(--border-radius);
+      padding: 0.25rem 0.65rem;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      transition: background 0.2s ease;
+    }
+    .lang-toggle:hover {
+      background: rgba(255,255,255,0.22);
+      color: #ffffff;
+    }
+
+    /* Mobile nav */
+    @media (max-width: 40rem) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-navy);
+        flex-direction: column;
+        padding: var(--space-sm);
+        gap: 0;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      }
+
+      .nav-links.is-open { display: flex; }
+
+      .nav-links li { width: 100%; }
+
+      .nav-links a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem var(--space-sm);
+        min-height: 44px;
+        width: 100%;
+      }
+
+      .nav-links .lang-toggle-desktop { display: none; }
+    }
+
+    @media (min-width: 40.0625rem) {
+      .nav-toggle { display: none; }
+      .lang-toggle-mobile { display: none; }
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+      color: #ffffff;
+      padding: 3.5rem 0 var(--space-lg);
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    .hero .headshot {
+      width: 12rem;
+      height: 12rem;
+      object-fit: cover;
+      object-position: top center;
+      margin: var(--space-md) auto 0;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.25);
+      display: block;
+    }
+
+    .hero-text {
+      padding: var(--space-lg) var(--space-sm) var(--space-md);
       text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9375rem;
+    }
+
+    .hero .pre-heading {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero .hero-name {
+      line-height: 1;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .hero .name-first {
+      display: block;
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .hero .name-last {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      padding-bottom: 0.3rem;
+      border-bottom: 4px solid var(--color-red);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .subtitle {
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-top: 0.25rem;
+    }
+
+    /* Tagline bar */
+    .hero-tagline-bar {
+      background: var(--color-sand);
+      border-top: 4px solid var(--color-red);
+      text-align: center;
+      padding: var(--space-md) var(--space-sm);
+    }
+
+    .hero-tagline-bar p {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-navy);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-tagline-bar .tagline-secondary {
+      display: block;
+    }
+
+    @media (min-width: 40rem) {
+      .hero-tagline-bar .tagline-secondary { display: inline; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .hero-tagline-bar p { color: #e0d8cc; }
+    }
+
+    @media (min-width: 48rem) {
+      .hero-inner {
+        grid-template-columns: auto 1fr;
+        align-items: center;
+      }
+
+      .hero .headshot {
+        width: 16rem;
+        height: 16rem;
+        margin: var(--space-md) 0 var(--space-md) var(--space-lg);
+      }
+
+      .hero-text {
+        text-align: left;
+        padding: var(--space-xl) var(--space-lg) var(--space-xl);
+        align-self: center;
+      }
+
+      .hero .name-first { font-size: var(--text-3xl); }
+      .hero-tagline-bar p { font-size: var(--text-2xl); }
+    }
+
+    @media (min-width: 64rem) {
+      .hero .headshot { width: 18rem; height: 18rem; }
+      .hero .pre-heading { font-size: var(--text-xl); }
+      .hero .name-first { font-size: var(--text-4xl); }
+    }
+
+    /* ===== Section Utilities ===== */
+    .section-pad {
+      padding: var(--space-xl) var(--space-sm);
+    }
+    @media (min-width: 48rem) {
+      .section-pad { padding: var(--space-2xl) var(--space-md); }
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-inner-narrow {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-size: var(--text-2xl);
+      text-align: center;
+      margin-bottom: var(--space-xs);
+    }
+
+    .section-subheading {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .bg-sand { background-color: var(--color-sand); }
+    .bg-cream { background-color: var(--color-cream); }
+    .bg-white { background-color: var(--color-white); }
+
+    /* ===== Content blocks ===== */
+    .content-prose {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      font-size: var(--text-lg);
+      line-height: 1.75;
+      color: var(--color-text-muted);
+    }
+
+    .content-prose p + p {
+      margin-top: var(--space-sm);
+    }
+
+    /* ===== Highlights ===== */
+    .highlights-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 48rem) {
+      .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .highlight-item {
+      padding: var(--space-md);
+      background: var(--color-white);
+      border-left: 4px solid var(--color-blue);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .highlight-item p {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      line-height: 1.65;
+    }
+
+    /* ===== Quote Blocks ===== */
+    .quote-block {
+      background: var(--color-navy);
+      color: #ffffff;
+      padding: var(--space-xl) var(--space-sm);
+      text-align: center;
+    }
+
+    .quote-block blockquote {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-style: italic;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .quote-block blockquote::before { content: "\201C"; }
+    .quote-block blockquote::after { content: "\201D"; }
+
+    @media (min-width: 48rem) {
+      .quote-block blockquote { font-size: var(--text-2xl); }
+    }
+
+    .quote-block a:focus-visible,
+    .hero a:focus-visible,
+    .site-header a:focus-visible,
+    .cta-banner a:focus-visible {
+      outline-color: var(--color-sky);
+    }
+
+    /* ===== CTA / Buttons ===== */
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-blue);
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.85rem 2.25rem;
+      border-radius: var(--border-radius);
+      letter-spacing: 0.03em;
+      transition: background 0.2s ease, transform 0.15s ease;
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+    }
+    .btn-primary:hover {
+      background: var(--color-blue-light);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    .btn-primary:focus-visible {
+      outline: 3px solid var(--color-sky);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 40rem) {
+      .btn-primary {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* ===== Donate Section ===== */
+    .donate-section {
+      background: var(--color-sand);
+      text-align: center;
+    }
+
+    .donate-section p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+    }
+
+    /* ===== Get Involved Section ===== */
+    .involve-section {
+      background: var(--color-cream);
+      text-align: center;
+    }
+
+    .involve-section p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+      max-width: var(--max-width-narrow);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .involve-section .section-heading {
+      margin-bottom: var(--space-sm);
+    }
+
+    /* ===== CTA Banner ===== */
+    .cta-banner {
+      background: var(--color-navy-light);
+      color: #ffffff;
+      text-align: center;
+      padding: var(--space-lg) var(--space-sm);
+    }
+
+    .cta-banner h2 {
+      font-size: var(--text-xl);
+      color: rgba(255,255,255,0.95);
+      margin-bottom: var(--space-xs);
+    }
+
+    .cta-banner p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.7);
+      margin-bottom: var(--space-md);
+    }
+
+    .cta-banner a { color: #ffffff; }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: var(--color-navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: var(--space-lg) var(--space-sm);
+    }
+
+    .site-footer .footer-logo {
+      height: 2rem;
+      width: auto;
+      margin: 0 auto var(--space-sm);
+      opacity: 0.6;
+    }
+
+    .site-footer p { font-size: var(--text-sm); }
+
+    .site-footer .taglines {
+      margin-bottom: var(--space-sm);
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-base);
+      color: rgba(255,255,255,0.65);
+      line-height: 1.8;
+    }
+
+    .site-footer a { color: rgba(255,255,255,0.7); }
+    .site-footer a:hover { color: #ffffff; }
+
+    /* ===== Dark mode component overrides =====
+       MUST come after all component rules to win on source order */
+    @media (prefers-color-scheme: dark) {
+      .highlight-item {
+        border-left-color: var(--color-blue);
+      }
+
+      .btn-primary { color: #ffffff; }
+      .btn-primary:hover { color: #ffffff; }
+
+      a { color: #7bb8e3; }
+      a:hover { color: #a3d0f0; }
+    }
+
+    /* ===== Focus ring global fallback ===== */
+    :focus-visible {
+      outline: 3px solid var(--color-blue);
+      outline-offset: 3px;
+    }
+
+    /* ===== Utility ===== */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ===== Print styles ===== */
+    @media print {
+      .site-header, .nav-toggle, .btn-primary,
+      .donate-section, .involve-section {
+        display: none;
+      }
+
+      body { font-size: 12pt; color: #000; }
+
+      .hero, .quote-block, .cta-banner, .hero-tagline-bar {
+        background: #fff;
+        color: #000;
+      }
+
+      .hero .pre-heading, .hero .hero-name, .hero .name-first, .hero .name-last,
+      .hero .subtitle, .hero-tagline-bar p,
+      .quote-block blockquote,
+      .cta-banner h2, .cta-banner p, .cta-banner a {
+        color: #000;
+      }
+
+      .hero .name-last { border-bottom-color: #000; }
+      .hero-tagline-bar { border-top-color: #000; }
     }
   </style>
 </head>
 <body>
 
-<header class="header">
-  <a href="/es">
-    <img src="https://grahamforblaine.com/logo_white.png" alt="Graham para Secretario del Condado de Blaine" />
-  </a>
-  <a href="/" class="lang-switch" lang="en" aria-label="View in English">English</a>
+<!-- Skip Navigation -->
+<a href="#main" class="skip-link">Ir al contenido principal</a>
+
+<!-- ===== Site Header ===== -->
+<header class="site-header">
+  <nav aria-label="Navegación principal">
+    <a href="/" class="logo-link" aria-label="Graham para Secretario del Condado de Blaine — página principal">
+      <img src="https://grahamforblaine.com/logo_white.png" alt="Graham para Secretario del Condado de Blaine" width="160" height="40" />
+    </a>
+
+    <div class="header-right">
+      <a href="/" class="lang-toggle lang-toggle-mobile" lang="en" aria-label="View in English">English</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
+        Menú
+      </button>
+    </div>
+
+    <ul class="nav-links" id="primary-nav" role="list">
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#sobre">Sobre Stephen</a></li>
+      <li><a href="#donar">Donar</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="/" class="lang-toggle lang-toggle-desktop" lang="en" aria-label="View in English">English</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="content">
-    <h1>Traducción al español próximamente</h1>
-    <p>Estamos preparando una versión en español de este sitio. Mientras tanto, puede contactarnos en español:</p>
-    <p><a href="mailto:info@grahamforblaine.com">info@grahamforblaine.com</a></p>
-    <p>Elecciones justas. Presupuestos honestos. Cuente con ello.</p>
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-label="Introducción">
+    <div class="hero-inner">
+      <img src="https://grahamforblaine.com/headshot.jpg?v=2" alt="Stephen Graham, Secretario del Condado de Blaine" class="headshot" width="288" height="288" />
+      <div class="hero-text">
+        <p class="pre-heading">Reelija a</p>
+        <h1 class="hero-name">
+          <span class="name-first">Stephen</span>
+          <span class="name-last">Graham.</span>
+        </h1>
+        <p class="subtitle">Secretario del Condado de Blaine</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tagline bar -->
+  <div class="hero-tagline-bar" role="presentation">
+    <p>Elecciones justas. &nbsp; Presupuestos honestos. &nbsp; <span class="tagline-secondary">Puede contar con él.</span></p>
   </div>
+
+  <!-- ===== Experiencia ===== -->
+  <section class="section-pad bg-cream" aria-labelledby="exp-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="exp-heading">Experiencia y Preparación</h2>
+      <div class="content-prose">
+        <p>Secretario del Condado de Blaine desde 2021.</p>
+        <p>Con una maestría en Política Pública de la Universidad de Georgetown. Cuenta con seis años administrando subvenciones de salud pública de varios millones de dólares, además de su experiencia como auditor y director de presupuesto del condado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Tagline Quote ===== -->
+  <section class="quote-block" aria-label="Lema de campaña">
+    <blockquote>
+      Elecciones justas. Presupuestos honestos. Puede contar con él.
+    </blockquote>
+  </section>
+
+  <!-- ===== Logros ===== -->
+  <section id="logros" class="section-pad bg-sand" aria-labelledby="logros-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="logros-heading">Lo que hemos logrado</h2>
+      <div class="highlights-grid">
+        <article class="highlight-item">
+          <p>En noviembre de 2025, el Condado de Blaine registró la participación electoral más alta del estado — un logro que refleja la confianza y el compromiso de nuestra comunidad. Cada auditoría financiera ha sido aprobada, demostrando responsabilidad y transparencia.</p>
+        </article>
+        <article class="highlight-item">
+          <p>Stephen modernizó el sistema de registro, ofreciendo acceso gratuito en línea a los índices de registros de tierras, junto con una alerta gratuita contra el fraude de propiedades.</p>
+        </article>
+        <article class="highlight-item">
+          <p>También amplió el acceso a intérpretes en español en los tribunales y en la oficina de registro, y fortaleció las operaciones judiciales que sirven a miles de residentes cada año.</p>
+        </article>
+        <article class="highlight-item">
+          <p>Por ley de Idaho, un solo Secretario electo cumple cinco funciones y Stephen las ha desempeñado todas desde 2021, sirviendo con dedicación a cada comunidad del Condado de Blaine.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sobre Stephen ===== -->
+  <section id="sobre" class="section-pad bg-cream" aria-labelledby="sobre-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="sobre-heading">Sobre Stephen</h2>
+      <div class="content-prose">
+        <p>Llegó a Idaho en 2020, eligió quedarse, compró una casa en Hailey y decidió dar un paso al frente para servir.</p>
+        <p>Hoy, está orgulloso de servir al Condado de Blaine y humildemente solicita su voto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Donar ===== -->
+  <section id="donar" class="section-pad donate-section" aria-labelledby="donar-heading">
+    <div class="section-inner-narrow">
+      <h2 class="section-heading" id="donar-heading">Apoye a Stephen</h2>
+      <p>Sus contribuciones mantienen esta campaña. Gracias.</p>
+      <a href="https://secure.actblue.com/donate/graham-for-clerk" class="btn-primary">Contribuir</a>
+    </div>
+  </section>
+
+  <!-- ===== Participar ===== -->
+  <section class="section-pad involve-section" aria-labelledby="participar-heading">
+    <div class="section-inner-narrow">
+      <h2 class="section-heading" id="participar-heading">Participe</h2>
+      <p>Sea voluntario, inscríbase para recibir noticias, o simplemente diga hola. Cada apoyo cuenta.</p>
+      <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Inscríbase como voluntario</a>
+    </div>
+  </section>
+
+  <!-- ===== CTA Banner ===== -->
+  <section id="contacto" class="cta-banner" aria-labelledby="contacto-heading">
+    <h2 id="contacto-heading">Tribunales. Presupuestos. Registros. Elecciones.</h2>
+    <p>Hechos bien.</p>
+    <a href="mailto:info@grahamforblaine.com" class="btn-primary">Contáctenos: info@grahamforblaine.com</a>
+  </section>
+
 </main>
 
-<footer class="footer">
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <img src="https://grahamforblaine.com/logo_white.png" alt="" aria-hidden="true" class="footer-logo" width="120" height="30" />
+  <p class="taglines">
+    Elecciones justas. Presupuestos honestos. Puede contar con él.<br />
+  </p>
   <p>Pagado por Graham for Blaine County Clerk</p>
 </footer>
+
+<!-- ===== Mobile Nav Toggle Script ===== -->
+<script>
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.nav-links');
+
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open');
+      toggle.textContent = expanded ? 'Menú' : 'Cerrar';
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+        toggle.textContent = 'Menú';
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (nav.classList.contains('is-open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+        toggle.textContent = 'Menú';
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
