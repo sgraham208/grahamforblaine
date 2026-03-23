@@ -86,22 +86,7 @@
       }
     }
 
-    /* ===== Dark mode contrast fixes ===== */
-    @media (prefers-color-scheme: dark) {
-      /* FIX 1: .built-item h3 — was using --color-navy (#0f1825 on #1e1e1e ~1.2:1) */
-      .built-item h3 {
-        color: #e0d8cc;
-      }
-
-      /* FIX 4: Card borders invisible — sand-dark (#2a2a2a) on #1e1e1e ~1.1:1 */
-      .role-card {
-        border-color: #3a3a3a;
-        border-left-color: var(--color-blue);
-      }
-      .built-item {
-        border-left-color: var(--color-blue);
-      }
-    }
+    /* Dark mode component overrides moved to end of stylesheet (after component rules) */
 
     /* ===== Reduced motion ===== */
     @media (prefers-reduced-motion: reduce) {
@@ -827,10 +812,69 @@
       border: 0;
     }
 
+    /* ===== Get Involved Section ===== */
+    .involve-section {
+      background: var(--color-cream);
+      text-align: center;
+    }
+
+    .involve-section p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+      max-width: var(--max-width-narrow);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .involve-section .section-heading {
+      margin-bottom: var(--space-sm);
+    }
+
+    /* ===== Dark mode component overrides =====
+       MUST come after all component rules to win on specificity + source order */
+    @media (prefers-color-scheme: dark) {
+      /* Built-item h3: --color-navy resolves to #0f1825 on #1e1e1e ≈ 1.2:1 — invisible */
+      .built-item h3 {
+        color: #e0d8cc;
+      }
+
+      /* Card borders: --color-sand-dark resolves to #2a2a2a on #1e1e1e ≈ 1.1:1 — invisible */
+      .role-card {
+        border-color: #3a3a3a;
+        border-left-color: var(--color-blue);
+      }
+
+      .built-item {
+        border-left-color: var(--color-blue);
+      }
+
+      /* Role card hover shadow needs to be visible in dark mode */
+      .role-card:hover {
+        box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      }
+
+      /* Buttons: ensure text stays white on the lighter blue background */
+      .btn-primary {
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        color: #ffffff;
+      }
+
+      /* Links in body content — ensure adequate contrast on dark backgrounds */
+      a {
+        color: #7bb8e3;
+      }
+      a:hover {
+        color: #a3d0f0;
+      }
+    }
+
     /* ===== Print styles ===== */
     @media print {
       .site-header, .nav-toggle, .btn-primary,
-      .donate-section, .section-divider {
+      .donate-section, .involve-section, .section-divider {
         display: none;
       }
 
@@ -886,6 +930,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#built">Record</a></li>
       <li><a href="#donate">Donate</a></li>
+      <li><a href="#involve">Get Involved</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="/es" class="lang-toggle lang-toggle-desktop" lang="es" aria-label="Ver en español">Español</a></li>
     </ul>
@@ -897,7 +942,7 @@
   <!-- ===== Hero — poster-inspired layout ===== -->
   <section class="hero" aria-label="Introduction">
     <div class="hero-inner">
-      <img src="https://grahamforblaine.com/headshot.jpg" alt="Stephen Graham, Blaine County Clerk" class="headshot" width="288" height="288" />
+      <img src="https://grahamforblaine.com/headshot.jpg?v=2" alt="Stephen Graham, Blaine County Clerk" class="headshot" width="288" height="288" />
       <div class="hero-text">
         <p class="pre-heading">Re-Elect</p>
         <h1 class="hero-name">
@@ -1057,6 +1102,15 @@
       <h2 class="section-heading" id="donate-heading">Support Stephen</h2>
       <p>Your contributions keep this campaign running. Thank you.</p>
       <a href="https://secure.actblue.com/donate/graham-for-clerk" class="btn-primary">Contribute</a>
+    </div>
+  </section>
+
+  <!-- ===== Get Involved ===== -->
+  <section id="involve" class="section-pad involve-section" aria-labelledby="involve-heading">
+    <div class="section-inner-narrow">
+      <h2 class="section-heading" id="involve-heading">Get Involved</h2>
+      <p>Volunteer, sign up for updates, or just say hello. Every bit of support makes a difference.</p>
+      <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up to Volunteer</a>
     </div>
   </section>
 
