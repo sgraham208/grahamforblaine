@@ -86,8 +86,6 @@
       }
     }
 
-    /* Dark mode component overrides moved to end of stylesheet (after component rules) */
-
     /* ===== Reduced motion ===== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -321,7 +319,7 @@
     .hero {
       background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
       color: #ffffff;
-      padding: 3.5rem 0 var(--space-lg); /* top clears nav, bottom gives breathing room */
+      padding: 3.5rem 0 var(--space-lg);
       overflow: hidden;
     }
 
@@ -416,7 +414,6 @@
       display: block;
     }
 
-    /* On wide screens where it all fits, keep it on one line */
     @media (min-width: 40rem) {
       .hero-tagline-bar .tagline-secondary {
         display: inline;
@@ -774,7 +771,6 @@
       height: 2rem;
       width: auto;
       margin: 0 auto var(--space-sm);
-      opacity: 0.6;
     }
 
     .site-footer p {
@@ -836,12 +832,12 @@
     /* ===== Dark mode component overrides =====
        MUST come after all component rules to win on specificity + source order */
     @media (prefers-color-scheme: dark) {
-      /* Built-item h3: --color-navy resolves to #0f1825 on #1e1e1e ≈ 1.2:1 — invisible */
+      /* Built-item h3: --color-navy resolves to #0f1825 on #1e1e1e — invisible */
       .built-item h3 {
         color: #e0d8cc;
       }
 
-      /* Card borders: --color-sand-dark resolves to #2a2a2a on #1e1e1e ≈ 1.1:1 — invisible */
+      /* Card borders: --color-sand-dark resolves to #2a2a2a on #1e1e1e — invisible */
       .role-card {
         border-color: #3a3a3a;
         border-left-color: var(--color-blue);
@@ -1120,7 +1116,7 @@
   <section id="contact" class="cta-banner" aria-labelledby="cta-heading">
     <h2 id="cta-heading">Courts. Budgets. Records. Elections.</h2>
     <p>Done right.</p>
-    <a href="/cdn-cgi/l/email-protection#7b12151d143b1c091a131a161d140919171a12151e55181416" class="btn-primary">Get in Touch: <span class="__cf_email__" data-cfemail="71181f171e3116031019101c171e03131d10181f145f121e1c">[email&#160;protected]</span></a>
+    <a href="mailto:info@grahamforblaine.com" class="btn-primary">Get in Touch: info@grahamforblaine.com</a>
   </section>
 
 </main>
@@ -1132,11 +1128,11 @@
     Fair Elections. Honest Budgets. Count on it.<br />
     Just Records. No Spin.
   </p>
-  <p>Paid for by Graham for Blaine County Clerk</p>
+  <p>Paid for by Graham for Blaine</p>
 </footer>
 
 <!-- ===== Mobile Nav Toggle Script ===== -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   (function () {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.nav-links');
@@ -1160,4 +1156,13 @@
     });
 
     document.addEventListener('click', function (e) {
-      if (nav.classList.contains('i
+      if (nav.classList.contains('is-open') && !e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+        toggle.textContent = 'Menu';
+      }
+    });
+  })();
+</script>
+</body>
+</html>
