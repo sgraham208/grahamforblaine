@@ -791,6 +791,46 @@
     }
     .site-footer a:hover { color: #ffffff; }
 
+    /* ===== Footer Links Row ===== */
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-sm);
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+      padding: var(--space-xs);
+      min-height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-links a:focus-visible {
+      outline: 2px solid var(--color-sky);
+      outline-offset: 3px;
+    }
+
+    /* ===== Transparency line ===== */
+    .transparency-line {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: var(--space-xs);
+    }
+
+    .transparency-line a {
+      font-weight: 600;
+    }
+
     /* ===== Focus ring global fallback ===== */
     :focus-visible {
       outline: 3px solid var(--color-blue);
@@ -970,23 +1010,23 @@
       <div class="role-cards" role="list">
         <article class="role-card" role="listitem">
           <h3>Due Process Done Right.</h3>
-          <p>Your Clerk's office manages every case filed in Blaine County District Court — civil disputes, family law, felony proceedings. Accurate records. Timely filings. Fair process.</p>
+          <p>Your Clerk's office manages every case filed in <a href="https://www.blainecountyid.gov/186/Courts" target="_blank" rel="noopener noreferrer">Blaine County District Court</a> — civil disputes, family law, felony proceedings. Accurate records. Timely filings. Fair process.</p>
         </article>
         <article class="role-card" role="listitem">
           <h3>Honest Budgets, Presented Clearly.</h3>
-          <p>Your money, accounted for — down to the dollar. Presented in a way that links public funds to the services they produce.</p>
+          <p>Your money, accounted for — down to the dollar. Presented in a way that links <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">public funds</a> to the services they produce.</p>
         </article>
         <article class="role-card" role="listitem">
           <h3>Your Public Records, Protected.</h3>
-          <p>Every deed, mortgage, lien, and vital record filed in Blaine County passes through the Recorder's office. Modernized systems. Accurate archives. Accessible to you.</p>
+          <p>Every deed, mortgage, lien, and vital record filed in Blaine County passes through the <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder's office</a>. Modernized systems. Accurate archives. Accessible to you.</p>
         </article>
         <article class="role-card" role="listitem">
           <h3>Small Government Done Well.</h3>
-          <p>The Clerk keeps county government running — recording the Board's official actions, fulfilling public records requests, and making sure the gears of local government turn efficiently and transparently.</p>
+          <p>The Clerk keeps county government running — recording the <a href="https://www.blainecountyid.gov/AgendaCenter" target="_blank" rel="noopener noreferrer">Board's official actions</a>, fulfilling public records requests, and making sure the gears of local government turn efficiently and transparently.</p>
         </article>
         <article class="role-card" role="listitem">
           <h3>Every Vote Counted, Every Time.</h3>
-          <p>Record turnout. On-time certification. Full compliance with Idaho law. Your elections are secure, professional, and nonpartisan — exactly how they should be.</p>
+          <p>Record turnout. On-time certification. Full compliance with Idaho law. Your <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">elections</a> are secure, professional, and nonpartisan — exactly how they should be.</p>
         </article>
       </div>
     </div>
@@ -1008,11 +1048,11 @@
         </article>
         <article class="matters-item">
           <h3>Elections run by professionals, not politicians.</h3>
-          <p>Every ballot counted. Every deadline met. Every result certified on time. Election administration should be boring, precise, and nonpartisan. That's how we run it.</p>
+          <p>Every ballot counted. Every deadline met. Every result certified on time. Election administration should be boring, precise, and nonpartisan. That's how we run it. <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Check your voter registration</a> or learn more about voting in Idaho.</p>
         </article>
         <article class="matters-item">
           <h3>Your records and your privacy, protected.</h3>
-          <p>Every deed, lien, and mortgage filed in Blaine County passes through the Recorder's office. Fraud Notify alerts, modernized recording systems, and careful stewardship of your personal information — because public records don't mean your privacy doesn't matter.</p>
+          <p>Every deed, lien, and mortgage filed in Blaine County passes through the Recorder's office. Fraud Notify alerts, modernized recording systems, and careful stewardship of your personal information — because public records don't mean your privacy doesn't matter. <a href="https://blainecountyrecorder.as.me/schedule/62fe4c6c" target="_blank" rel="noopener noreferrer">Schedule an appointment</a> with the Recorder's office.</p>
         </article>
         <article class="matters-item">
           <h3>A courthouse that works for you.</h3>
@@ -1020,7 +1060,7 @@
         </article>
         <article class="matters-item">
           <h3>Your Recorder's office, open and accessible.</h3>
-          <p>Passport appointments, marriage licenses, and land records — all available at the Recorder's office, including walk-ins and Spanish language support.</p>
+          <p>Passport appointments, marriage licenses, and land records — all available at the <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder's office</a>, including walk-ins and Spanish language support.</p>
         </article>
       </div>
     </div>
@@ -1046,7 +1086,7 @@
     <div class="section-inner">
       <h2 class="section-heading" id="about-heading">About Stephen</h2>
       <div class="about-content">
-        <p>As Clerk, Stephen Graham serves as Clerk of the District Court, Ex-Officio Auditor, Chief Budget Officer, Ex-Officio Recorder, and Chief Elections Officer — five constitutional roles, one standard of excellence.</p>
+        <p>As <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham serves as Clerk of the District Court, Ex-Officio Auditor, Chief Budget Officer, Ex-Officio Recorder, and Chief Elections Officer — five constitutional roles, one standard of excellence.</p>
         <p>Stephen lives in the Woodside neighborhood in Hailey and serves as Concertmaster of the Wood River Valley Orchestra, a community orchestra. He came to Idaho in 2020 as an artist-in-residence at Ernest Hemingway's historic home in Ketchum — and stayed.</p>
         <p>He was first appointed Blaine County Clerk in September 2021 and subsequently won election. He holds a Master of Public Policy from Georgetown University and brings over a decade of experience managing multi-million-dollar budgets — six years in international public health and five years as Blaine County's chief budget officer.</p>
       </div>
@@ -1060,7 +1100,7 @@
       <div class="built-grid">
         <article class="built-item">
           <h3>Highest voter turnout in Idaho.</h3>
-          <p>Blaine County recorded the highest voter turnout in the state in the November 2025 election.</p>
+          <p>Blaine County recorded the <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">highest voter turnout</a> in the state in the November 2025 election.</p>
         </article>
         <article class="built-item">
           <h3>Voter information pamphlet.</h3>
@@ -1072,7 +1112,7 @@
         </article>
         <article class="built-item">
           <h3>Modernized land records.</h3>
-          <p>Launched new recording software in 2025 after 18 months of planning. Free online access to document indexes, plus Fraud Notify alerts for property owners.</p>
+          <p>Launched new <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">recording software</a> in 2025 after 18 months of planning. Free online access to document indexes, plus Fraud Notify alerts for property owners.</p>
         </article>
         <article class="built-item">
           <h3>Enterprise financial system rollout.</h3>
@@ -1080,7 +1120,7 @@
         </article>
         <article class="built-item">
           <h3>Budget transparency.</h3>
-          <p>Built a multi-decade budget analytics database and published an annual budget book and financial report — so the public can see where every dollar goes.</p>
+          <p>Built a multi-decade budget analytics database and published an <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">annual budget book and financial report</a> — so the public can see where every dollar goes.</p>
         </article>
         <article class="built-item">
           <h3>Broadband to Picabo and Carey.</h3>
@@ -1100,6 +1140,7 @@
       <h2 class="section-heading" id="donate-heading">Support Stephen</h2>
       <p>Your contributions keep this campaign running. Thank you.</p>
       <a href="https://secure.actblue.com/donate/grahamforblaine" class="btn-primary">Contribute</a>
+      <p class="transparency-line"><a href="https://sunshine.voteidaho.gov/login" target="_blank" rel="noopener noreferrer">View campaign finance disclosures</a></p>
     </div>
   </section>
 
@@ -1124,6 +1165,15 @@
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
   <img src="https://grahamforblaine.com/logo_transparent.png" alt="" aria-hidden="true" class="footer-logo" width="120" height="30" />
+
+  <!-- Footer quick links -->
+  <nav class="footer-links" aria-label="External resources">
+    <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Official County Bio</a>
+    <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">Elections</a>
+    <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder</a>
+    <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">VoteIdaho.gov</a>
+  </nav>
+
   <p class="taglines">
     Fair Elections. Honest Budgets. Count on it.<br />
     Just Records. No Spin.
