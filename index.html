@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Graham — Blaine County Clerk</title>
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://grahamforblaine.com/" />
+
   <!-- SEO & Social -->
   <meta name="description" content="Stephen Graham for Blaine County Clerk. Fair Elections. Honest Budgets. Count on it." />
   <meta property="og:title" content="Graham for Blaine County Clerk" />
@@ -18,6 +21,15 @@
   <meta name="twitter:title" content="Graham for Blaine County Clerk" />
   <meta name="twitter:description" content="Fair Elections. Honest Budgets. Count on it." />
   <meta name="twitter:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDEY6CCJQX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GDEY6CCJQX');
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -869,6 +881,134 @@
       margin-bottom: var(--space-sm);
     }
 
+    /* ===== Mailchimp Signup Form ===== */
+    .signup-form-wrap {
+      max-width: 28rem;
+      margin: 0 auto var(--space-lg);
+      text-align: left;
+    }
+
+    .signup-form-wrap .signup-label {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: var(--space-sm);
+      display: block;
+      text-align: center;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signup-form-wrap .signup-label {
+        color: #e0d8cc;
+      }
+    }
+
+    .signup-form-fields {
+      display: flex;
+      gap: var(--space-xs);
+      flex-direction: column;
+    }
+
+    @media (min-width: 28rem) {
+      .signup-form-fields {
+        flex-direction: row;
+      }
+    }
+
+    .signup-form-fields input[type="email"] {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      padding: 0.75rem var(--space-sm);
+      border: 2px solid var(--color-sand-dark);
+      border-radius: var(--border-radius);
+      background: var(--color-white);
+      color: var(--color-text);
+      min-height: 2.75rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .signup-form-fields input[type="email"]:focus {
+      outline: none;
+      border-color: var(--color-blue);
+      box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.15);
+    }
+
+    .signup-form-fields input[type="email"]::placeholder {
+      color: var(--color-text-light);
+    }
+
+    .signup-form-fields .btn-signup {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-navy);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s ease;
+    }
+
+    .signup-form-fields .btn-signup:hover {
+      background: var(--color-navy-light);
+    }
+
+    .signup-form-fields .btn-signup:focus-visible {
+      outline: 3px solid var(--color-sky);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signup-form-fields input[type="email"] {
+        border-color: #3a3a3a;
+      }
+
+      .signup-form-fields .btn-signup {
+        background: var(--color-blue);
+      }
+      .signup-form-fields .btn-signup:hover {
+        background: var(--color-blue-light);
+      }
+    }
+
+    .signup-status {
+      text-align: center;
+      font-size: var(--text-sm);
+      margin-top: var(--space-xs);
+      min-height: 1.5rem;
+    }
+
+    .signup-status.success {
+      color: #2d7d46;
+    }
+
+    .signup-status.error {
+      color: var(--color-red);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .signup-status.success { color: #6bc785; }
+    }
+
+    .involve-divider {
+      width: 3rem;
+      border: none;
+      border-top: 2px solid var(--color-sand-dark);
+      margin: 0 auto var(--space-md);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .involve-divider {
+        border-top-color: #3a3a3a;
+      }
+    }
+
     /* ===== Dark mode component overrides =====
        MUST come after all component rules to win on specificity + source order */
     @media (prefers-color-scheme: dark) {
@@ -1149,6 +1289,25 @@
     <div class="section-inner-narrow">
       <h2 class="section-heading" id="involve-heading">Get Involved</h2>
       <p>Volunteer, sign up for updates, or just say hello. Every bit of support makes a difference.</p>
+
+      <!-- Mailchimp Embedded Signup Form -->
+      <div class="signup-form-wrap" role="form" aria-label="Campaign email updates signup">
+        <label class="signup-label" for="mc-email">Get Campaign Updates</label>
+        <form action="https://grahamforblaine.us14.list-manage.com/subscribe/post?u=4522843f36323ac7f396cc054&amp;id=2cd8b5bb77&amp;f_id=00d846e5f0" method="post" id="mc-signup-form" target="_blank">
+          <div class="signup-form-fields">
+            <input type="email" name="EMAIL" id="mc-email" placeholder="you@example.com" required aria-required="true" autocomplete="email" />
+            <button type="submit" class="btn-signup" name="subscribe">Subscribe</button>
+          </div>
+          <!-- Honeypot field — prevents bot signups -->
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_4522843f36323ac7f396cc054_2cd8b5bb77" tabindex="-1" value="" />
+          </div>
+        </form>
+        <p class="signup-status" id="mc-signup-status" aria-live="polite"></p>
+      </div>
+
+      <hr class="involve-divider" />
+
       <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up to Volunteer</a>
     </div>
   </section>
