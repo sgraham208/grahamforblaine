@@ -4,15 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Graham — Blaine County Clerk</title>
-
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
   <!-- Canonical URL -->
   <link rel="canonical" href="https://grahamforblaine.com/" />
-
   <!-- SEO & Social -->
   <meta name="description" content="Stephen Graham for Blaine County Clerk. Fair Elections. Honest Budgets. Count on it." />
   <meta property="og:title" content="Graham for Blaine County Clerk" />
@@ -26,7 +23,6 @@
   <meta name="twitter:title" content="Graham for Blaine County Clerk" />
   <meta name="twitter:description" content="Fair Elections. Honest Budgets. Count on it." />
   <meta name="twitter:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
-
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDEY6CCJQX"></script>
   <script>
@@ -35,12 +31,10 @@
     gtag('js', new Date());
     gtag('config', 'G-GDEY6CCJQX');
   </script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <style>
     /* ===== CSS Custom Properties ===== */
     :root {
@@ -60,7 +54,6 @@
       --color-accent: #b8860b;
       --color-accent-light: #d4a017;
       --color-red: #c0392b;
-
       /* Spacing scale */
       --space-xs: 0.5rem;
       --space-sm: 1rem;
@@ -68,7 +61,6 @@
       --space-lg: 2.5rem;
       --space-xl: 4rem;
       --space-2xl: 6rem;
-
       /* Typography */
       --font-display: 'Montserrat', 'Segoe UI', sans-serif;
       --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
@@ -79,13 +71,11 @@
       --text-2xl: 2rem;
       --text-3xl: 2.75rem;
       --text-4xl: 3.5rem;
-
       /* Layout */
       --max-width: 72rem;
       --max-width-narrow: 48rem;
       --border-radius: 0.375rem;
     }
-
     /* ===== Dark mode support ===== */
     @media (prefers-color-scheme: dark) {
       :root {
@@ -102,7 +92,6 @@
         --color-blue-light: #7bb8e3;
       }
     }
-
     /* ===== Reduced motion ===== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -111,19 +100,16 @@
         scroll-behavior: auto;
       }
     }
-
     /* ===== Reset & Base ===== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       scroll-behavior: smooth;
       font-size: 100%;
     }
-
     body {
       font-family: var(--font-body);
       font-size: var(--text-base);
@@ -132,13 +118,11 @@
       background-color: var(--color-cream);
       -webkit-font-smoothing: antialiased;
     }
-
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
-
     a {
       color: var(--color-blue);
       text-decoration-thickness: 1px;
@@ -146,23 +130,19 @@
       transition: color 0.2s ease;
     }
     a:hover { color: var(--color-blue-light); }
-
     a:focus-visible {
       outline: 3px solid var(--color-blue);
       outline-offset: 3px;
       border-radius: 2px;
     }
-
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       line-height: 1.2;
       color: var(--color-navy);
     }
-
     @media (prefers-color-scheme: dark) {
       h1, h2, h3, h4 { color: #e0d8cc; }
     }
-
     /* ===== Skip Link ===== */
     .skip-link {
       position: absolute;
@@ -182,7 +162,6 @@
       outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     /* ===== Site Header / Nav ===== */
     .site-header {
       position: fixed;
@@ -193,7 +172,6 @@
       background: var(--color-navy);
       padding: var(--space-xs) var(--space-sm);
     }
-
     .site-header nav {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -202,7 +180,6 @@
       justify-content: space-between;
       gap: var(--space-xs);
     }
-
     .site-header .logo-link {
       display: flex;
       align-items: center;
@@ -211,13 +188,11 @@
       height: 2.5rem;
       width: auto;
     }
-
     .header-right {
       display: flex;
       align-items: center;
       gap: var(--space-xs);
     }
-
     .nav-toggle {
       display: none;
       background: none;
@@ -235,19 +210,16 @@
       align-items: center;
       justify-content: center;
     }
-
     .nav-toggle:focus-visible {
       outline: 3px solid var(--color-sky);
       outline-offset: 2px;
     }
-
     .nav-links {
       display: flex;
       list-style: none;
       gap: var(--space-md);
       align-items: center;
     }
-
     .nav-links a {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
@@ -263,7 +235,6 @@
       outline: 2px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     .lang-toggle {
       font-size: var(--text-sm);
       background: rgba(255,255,255,0.12);
@@ -280,13 +251,11 @@
       background: rgba(255,255,255,0.22);
       color: #ffffff;
     }
-
     /* Mobile nav */
     @media (max-width: 40rem) {
       .nav-toggle {
         display: flex;
       }
-
       .nav-links {
         display: none;
         position: absolute;
@@ -300,15 +269,12 @@
         border-top: 1px solid rgba(255,255,255,0.12);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       }
-
       .nav-links.is-open {
         display: flex;
       }
-
       .nav-links li {
         width: 100%;
       }
-
       .nav-links a {
         display: flex;
         align-items: center;
@@ -316,22 +282,18 @@
         min-height: 44px;
         width: 100%;
       }
-
       .nav-links .lang-toggle-desktop {
         display: none;
       }
     }
-
     @media (min-width: 40.0625rem) {
       .nav-toggle {
         display: none;
       }
-
       .lang-toggle-mobile {
         display: none;
       }
     }
-
     /* ===== Hero — poster-inspired layout ===== */
     .hero {
       background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
@@ -339,7 +301,6 @@
       padding: 3.5rem 0 var(--space-lg);
       overflow: hidden;
     }
-
     .hero-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -347,7 +308,6 @@
       grid-template-columns: 1fr;
       align-items: center;
     }
-
     .hero .headshot {
       width: 12rem;
       height: 12rem;
@@ -358,12 +318,10 @@
       border: 4px solid rgba(255,255,255,0.25);
       display: block;
     }
-
     .hero-text {
       padding: var(--space-lg) var(--space-sm) var(--space-md);
       text-align: center;
     }
-
     .hero .pre-heading {
       font-family: var(--font-display);
       font-size: var(--text-lg);
@@ -373,13 +331,11 @@
       margin-bottom: 0.15rem;
       letter-spacing: 0.02em;
     }
-
     .hero .hero-name {
       line-height: 1;
       margin: 0;
       color: #ffffff;
     }
-
     .hero .name-first {
       display: block;
       font-family: var(--font-display);
@@ -388,7 +344,6 @@
       color: #9BA4B4;
       line-height: 1.1;
     }
-
     .hero .name-last {
       display: inline-block;
       font-family: var(--font-display);
@@ -397,20 +352,18 @@
       color: #ffffff;
       line-height: 0.95;
       letter-spacing: -0.02em;
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.1rem;
       border-bottom: 4px solid var(--color-red);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.2rem;
     }
-
     .hero .subtitle {
       font-size: var(--text-lg);
       color: #9BA4B4;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: 0.25rem;
+      margin-top: 0.1rem;
     }
-
     /* Tagline bar beneath hero */
     .hero-tagline-bar {
       background: var(--color-sand);
@@ -418,7 +371,6 @@
       text-align: center;
       padding: var(--space-md) var(--space-sm);
     }
-
     .hero-tagline-bar p {
       font-family: var(--font-display);
       font-size: var(--text-xl);
@@ -426,17 +378,14 @@
       color: var(--color-navy);
       letter-spacing: 0.02em;
     }
-
     .hero-tagline-bar .tagline-secondary {
       display: block;
     }
-
     @media (min-width: 40rem) {
       .hero-tagline-bar .tagline-secondary {
         display: inline;
       }
     }
-
     @media (prefers-color-scheme: dark) {
       .hero-tagline-bar {
         background: var(--color-sand);
@@ -446,49 +395,40 @@
         color: #e0d8cc;
       }
     }
-
     @media (min-width: 48rem) {
       .hero-inner {
         grid-template-columns: auto 1fr;
         align-items: center;
       }
-
       .hero .headshot {
         width: 16rem;
         height: 16rem;
         margin: var(--space-md) 0 var(--space-md) var(--space-lg);
       }
-
       .hero-text {
         text-align: left;
         padding: var(--space-xl) var(--space-lg) var(--space-xl);
         align-self: center;
       }
-
       .hero .name-first {
         font-size: var(--text-3xl);
       }
-
       .hero-tagline-bar p {
         font-size: var(--text-2xl);
       }
     }
-
     @media (min-width: 64rem) {
       .hero .headshot {
         width: 18rem;
         height: 18rem;
       }
-
       .hero .pre-heading {
         font-size: var(--text-xl);
       }
-
       .hero .name-first {
         font-size: var(--text-4xl);
       }
     }
-
     /* ===== Section Utilities ===== */
     .section-pad {
       padding: var(--space-xl) var(--space-sm);
@@ -496,23 +436,19 @@
     @media (min-width: 48rem) {
       .section-pad { padding: var(--space-2xl) var(--space-md); }
     }
-
     .section-inner {
       max-width: var(--max-width);
       margin: 0 auto;
     }
-
     .section-inner-narrow {
       max-width: var(--max-width-narrow);
       margin: 0 auto;
     }
-
     .section-heading {
       font-size: var(--text-2xl);
       text-align: center;
       margin-bottom: var(--space-xs);
     }
-
     .section-subheading {
       font-family: var(--font-display);
       font-style: italic;
@@ -521,7 +457,6 @@
       text-align: center;
       margin-bottom: var(--space-lg);
     }
-
     .geo-line {
       font-family: var(--font-display);
       font-style: italic;
@@ -533,11 +468,9 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .bg-sand { background-color: var(--color-sand); }
     .bg-cream { background-color: var(--color-cream); }
     .bg-white { background-color: var(--color-white); }
-
     /* ===== Role Cards ===== */
     .role-cards {
       display: grid;
@@ -550,7 +483,6 @@
     @media (min-width: 64rem) {
       .role-cards { grid-template-columns: repeat(3, 1fr); }
     }
-
     .role-card {
       background: var(--color-white);
       border: 1px solid var(--color-sand-dark);
@@ -562,25 +494,21 @@
     .role-card:hover {
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
-
     .role-card h3 {
       font-size: var(--text-lg);
       margin-bottom: var(--space-xs);
     }
-
     .role-card p {
       color: var(--color-text-muted);
       font-size: var(--text-base);
       line-height: 1.6;
     }
-
     /* ===== Section Divider ===== */
     .section-divider {
       background: var(--color-navy-light);
       text-align: center;
       padding: var(--space-md) var(--space-sm);
     }
-
     .section-divider p {
       font-family: var(--font-body);
       font-size: var(--text-lg);
@@ -589,29 +517,24 @@
       text-transform: uppercase;
       color: rgba(255,255,255,0.85);
     }
-
     /* ===== Why It Matters ===== */
     .matters-list {
       display: grid;
       gap: var(--space-md);
     }
-
     .matters-item {
       max-width: var(--max-width-narrow);
       margin: 0 auto;
       width: 100%;
     }
-
     .matters-item h3 {
       font-size: var(--text-lg);
       margin-bottom: 0.35rem;
     }
-
     .matters-item p {
       color: var(--color-text-muted);
       line-height: 1.65;
     }
-
     /* ===== Quote Blocks ===== */
     .quote-block {
       background: var(--color-navy);
@@ -619,7 +542,6 @@
       padding: var(--space-xl) var(--space-sm);
       text-align: center;
     }
-
     .quote-block blockquote {
       max-width: var(--max-width-narrow);
       margin: 0 auto;
@@ -629,10 +551,8 @@
       line-height: 1.5;
       color: rgba(255,255,255,0.92);
     }
-
     .quote-block blockquote::before { content: "\201C"; }
     .quote-block blockquote::after { content: "\201D"; }
-
     .quote-block cite {
       display: block;
       margin-top: var(--space-sm);
@@ -644,11 +564,9 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
-
     .quote-block--alt {
       background: var(--color-navy-light);
     }
-
     .quote-block a:focus-visible,
     .hero a:focus-visible,
     .site-header a:focus-visible,
@@ -656,11 +574,9 @@
     .section-divider a:focus-visible {
       outline-color: var(--color-sky);
     }
-
     @media (min-width: 48rem) {
       .quote-block blockquote { font-size: var(--text-2xl); }
     }
-
     /* ===== About Section ===== */
     .about-content {
       max-width: var(--max-width-narrow);
@@ -669,11 +585,9 @@
       line-height: 1.75;
       color: var(--color-text-muted);
     }
-
     .about-content p + p {
       margin-top: var(--space-sm);
     }
-
     /* ===== What We've Built ===== */
     .built-grid {
       display: grid;
@@ -683,14 +597,12 @@
     @media (min-width: 48rem) {
       .built-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     .built-item {
       padding: var(--space-md);
       background: var(--color-white);
       border-left: 4px solid var(--color-blue);
       border-radius: 0 var(--border-radius) var(--border-radius) 0;
     }
-
     .built-item h3 {
       font-size: var(--text-base);
       font-family: var(--font-body);
@@ -698,13 +610,11 @@
       margin-bottom: 0.35rem;
       color: var(--color-navy);
     }
-
     .built-item p {
       color: var(--color-text-muted);
       font-size: var(--text-base);
       line-height: 1.6;
     }
-
     /* ===== In the News ===== */
     .news-list {
       list-style: none;
@@ -713,7 +623,6 @@
       max-width: var(--max-width-narrow);
       margin-inline: auto;
     }
-
     .news-list li {
       padding: var(--space-sm) 0;
       border-bottom: 1px solid var(--color-sand-dark);
@@ -722,11 +631,9 @@
       align-items: baseline;
       gap: 0.35rem 0.75rem;
     }
-
     .news-list li:last-child {
       border-bottom: none;
     }
-
     .news-source {
       font-family: var(--font-display);
       font-size: var(--text-sm);
@@ -736,37 +643,31 @@
       letter-spacing: 0.04em;
       flex-shrink: 0;
     }
-
     .news-headline {
       font-size: var(--text-base);
       color: var(--color-text);
       text-decoration: none;
       line-height: 1.4;
     }
-
     .news-headline:hover {
       color: var(--color-blue);
       text-decoration: underline;
     }
-
     .news-date {
       font-size: var(--text-sm);
       color: var(--color-text-light);
       flex-basis: 100%;
     }
-
     /* ===== Donate Section ===== */
     .donate-section {
       background: var(--color-sand);
       text-align: center;
     }
-
     .donate-section p {
       font-size: var(--text-lg);
       color: var(--color-text-muted);
       margin-bottom: var(--space-md);
     }
-
     .btn-primary {
       display: inline-block;
       background: var(--color-blue);
@@ -791,7 +692,6 @@
       outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     @media (max-width: 40rem) {
       .btn-primary {
         display: block;
@@ -799,7 +699,6 @@
         text-align: center;
       }
     }
-
     /* ===== CTA Banner ===== */
     .cta-banner {
       background: var(--color-navy-light);
@@ -807,13 +706,11 @@
       text-align: center;
       padding: var(--space-lg) var(--space-sm);
     }
-
     .cta-banner h2 {
       font-size: var(--text-xl);
       color: rgba(255,255,255,0.95);
       margin-bottom: var(--space-xs);
     }
-
     .cta-banner p {
       font-family: var(--font-display);
       font-style: italic;
@@ -821,11 +718,9 @@
       color: rgba(255,255,255,0.7);
       margin-bottom: var(--space-md);
     }
-
     .cta-banner a {
       color: #ffffff;
     }
-
     /* ===== Footer ===== */
     .site-footer {
       background: var(--color-navy);
@@ -833,17 +728,14 @@
       text-align: center;
       padding: var(--space-lg) var(--space-sm);
     }
-
     .site-footer .footer-logo {
       height: 2rem;
       width: auto;
       margin: 0 auto var(--space-sm);
     }
-
     .site-footer p {
       font-size: var(--text-sm);
     }
-
     .site-footer .taglines {
       margin-bottom: var(--space-sm);
       font-family: var(--font-display);
@@ -852,12 +744,10 @@
       color: rgba(255,255,255,0.65);
       line-height: 1.8;
     }
-
     .site-footer a {
       color: rgba(255,255,255,0.7);
     }
     .site-footer a:hover { color: #ffffff; }
-
     /* ===== Footer Links Row ===== */
     .footer-links {
       display: flex;
@@ -867,7 +757,6 @@
       margin-bottom: var(--space-sm);
       flex-wrap: wrap;
     }
-
     .footer-links a {
       font-size: var(--text-sm);
       font-weight: 600;
@@ -886,24 +775,20 @@
       outline: 2px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     /* ===== Transparency line ===== */
     .transparency-line {
       font-size: var(--text-sm);
       color: var(--color-text-muted);
       margin-top: var(--space-xs);
     }
-
     .transparency-line a {
       font-weight: 600;
     }
-
     /* ===== Focus ring global fallback ===== */
     :focus-visible {
       outline: 3px solid var(--color-blue);
       outline-offset: 3px;
     }
-
     /* ===== Utility ===== */
     .visually-hidden {
       position: absolute;
@@ -916,13 +801,11 @@
       white-space: nowrap;
       border: 0;
     }
-
     /* ===== Get Involved Section ===== */
     .involve-section {
       background: var(--color-cream);
       text-align: center;
     }
-
     .involve-section p {
       font-size: var(--text-lg);
       color: var(--color-text-muted);
@@ -931,18 +814,15 @@
       margin-left: auto;
       margin-right: auto;
     }
-
     .involve-section .section-heading {
       margin-bottom: var(--space-sm);
     }
-
     /* ===== Mailchimp Signup Form ===== */
     .signup-form-wrap {
       max-width: 28rem;
       margin: 0 auto var(--space-lg);
       text-align: left;
     }
-
     .signup-form-wrap .signup-label {
       font-family: var(--font-display);
       font-size: var(--text-base);
@@ -952,25 +832,21 @@
       display: block;
       text-align: center;
     }
-
     @media (prefers-color-scheme: dark) {
       .signup-form-wrap .signup-label {
         color: #e0d8cc;
       }
     }
-
     .signup-form-fields {
       display: flex;
       gap: var(--space-xs);
       flex-direction: column;
     }
-
     @media (min-width: 28rem) {
       .signup-form-fields {
         flex-direction: row;
       }
     }
-
     .signup-form-fields input[type="email"] {
       flex: 1;
       font-family: var(--font-body);
@@ -983,17 +859,14 @@
       min-height: 2.75rem;
       transition: border-color 0.2s ease;
     }
-
     .signup-form-fields input[type="email"]:focus {
       outline: none;
       border-color: var(--color-blue);
       box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.15);
     }
-
     .signup-form-fields input[type="email"]::placeholder {
       color: var(--color-text-light);
     }
-
     .signup-form-fields .btn-signup {
       font-family: var(--font-body);
       font-size: var(--text-base);
@@ -1009,21 +882,17 @@
       letter-spacing: 0.03em;
       transition: background 0.2s ease;
     }
-
     .signup-form-fields .btn-signup:hover {
       background: var(--color-navy-light);
     }
-
     .signup-form-fields .btn-signup:focus-visible {
       outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     @media (prefers-color-scheme: dark) {
       .signup-form-fields input[type="email"] {
         border-color: #3a3a3a;
       }
-
       .signup-form-fields .btn-signup {
         background: var(--color-blue);
       }
@@ -1031,50 +900,41 @@
         background: var(--color-blue-light);
       }
     }
-
     .signup-status {
       text-align: center;
       font-size: var(--text-sm);
       margin-top: var(--space-xs);
       min-height: 1.5rem;
     }
-
     .signup-status.success {
       color: #2d7d46;
     }
-
     .signup-status.error {
       color: var(--color-red);
     }
-
     @media (prefers-color-scheme: dark) {
       .signup-status.success { color: #6bc785; }
     }
-
     .involve-divider {
       width: 3rem;
       border: none;
       border-top: 2px solid var(--color-sand-dark);
       margin: 0 auto var(--space-md);
     }
-
     @media (prefers-color-scheme: dark) {
       .involve-divider {
         border-top-color: #3a3a3a;
       }
     }
-
     /* ===== Vote Info Section ===== */
     .vote-info {
       background: var(--color-navy);
       color: #ffffff;
       text-align: center;
     }
-
     .vote-info .section-heading {
       color: #ffffff;
     }
-
     .vote-info-lead {
       font-size: var(--text-lg);
       line-height: 1.6;
@@ -1082,11 +942,9 @@
       margin: 0 auto var(--space-lg);
       color: rgba(255,255,255,0.85);
     }
-
     .vote-info-lead strong {
       color: #ffffff;
     }
-
     .vote-dates {
       display: flex;
       gap: var(--space-md);
@@ -1094,7 +952,6 @@
       flex-wrap: wrap;
       margin-bottom: var(--space-lg);
     }
-
     .vote-date-card {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.15);
@@ -1102,7 +959,6 @@
       padding: var(--space-md) var(--space-lg);
       min-width: 14rem;
     }
-
     .vote-date-card .date-label {
       font-family: var(--font-body);
       font-size: var(--text-sm);
@@ -1112,21 +968,18 @@
       color: rgba(255,255,255,0.78);
       margin-bottom: var(--space-xs);
     }
-
     .vote-date-card .date-value {
       font-family: var(--font-display);
       font-size: var(--text-xl);
       font-weight: 700;
       color: #ffffff;
     }
-
     .vote-info-note {
       font-size: var(--text-base);
       color: rgba(255,255,255,0.85);
       max-width: 34rem;
       margin: 0 auto;
     }
-
     .vote-info-note a {
       color: #7bb8e3;
       font-weight: 600;
@@ -1134,7 +987,6 @@
     .vote-info-note a:hover {
       color: #a3d0f0;
     }
-
     .vote-countdown {
       font-family: var(--font-body);
       font-size: var(--text-base);
@@ -1143,11 +995,9 @@
       margin-bottom: var(--space-md);
       letter-spacing: 0.02em;
     }
-
     .vote-countdown:empty {
       display: none;
     }
-
     /* ===== Dark mode component overrides =====
        MUST come after all component rules to win on specificity + source order */
     @media (prefers-color-scheme: dark) {
@@ -1155,22 +1005,18 @@
       .built-item h3 {
         color: #e0d8cc;
       }
-
       /* Card borders: --color-sand-dark resolves to #2a2a2a on #1e1e1e — invisible */
       .role-card {
         border-color: #3a3a3a;
         border-left-color: var(--color-blue);
       }
-
       .built-item {
         border-left-color: var(--color-blue);
       }
-
       /* Role card hover shadow needs to be visible in dark mode */
       .role-card:hover {
         box-shadow: 0 2px 12px rgba(0,0,0,0.3);
       }
-
       /* Buttons: ensure text stays white on the lighter blue background */
       .btn-primary {
         color: #ffffff;
@@ -1178,7 +1024,6 @@
       .btn-primary:hover {
         color: #ffffff;
       }
-
       /* Links in body content — ensure adequate contrast on dark backgrounds */
       a {
         color: #7bb8e3;
@@ -1187,35 +1032,29 @@
         color: #a3d0f0;
       }
     }
-
     /* ===== Print styles ===== */
     @media print {
       .site-header, .nav-toggle, .btn-primary,
       .donate-section, .involve-section, .section-divider {
         display: none;
       }
-
       body {
         font-size: 12pt;
         color: #000;
       }
-
       .hero, .quote-block, .cta-banner, .hero-tagline-bar {
         background: #fff;
         color: #000;
       }
-
       .hero .pre-heading, .hero .hero-name, .hero .name-first, .hero .name-last,
       .hero .subtitle, .hero-tagline-bar p,
       .quote-block blockquote, .quote-block cite,
       .cta-banner h2, .cta-banner p, .cta-banner a {
         color: #000;
       }
-
       .hero .name-last {
         border-bottom-color: #000;
       }
-
       .hero-tagline-bar {
         border-top-color: #000;
       }
@@ -1223,25 +1062,20 @@
   </style>
 </head>
 <body>
-
 <!-- Skip Navigation -->
 <a href="#main" class="skip-link">Skip to main content</a>
-
 <!-- ===== Site Header ===== -->
 <header class="site-header">
   <nav aria-label="Primary navigation">
     <a href="#" class="logo-link" aria-label="Graham for Blaine County Clerk — return to top">
       <img src="https://grahamforblaine.com/logo_transparent.png" alt="Graham for Blaine County Clerk — home" width="160" height="40" />
     </a>
-
     <div class="header-right">
       <a href="/es" class="lang-toggle lang-toggle-mobile" lang="es" aria-label="Ver en español">Español</a>
-
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
         Menu
       </button>
     </div>
-
     <ul class="nav-links" id="primary-nav" role="list">
       <li><a href="#roles">The Office</a></li>
       <li><a href="#about">About</a></li>
@@ -1254,9 +1088,7 @@
     </ul>
   </nav>
 </header>
-
 <main id="main">
-
   <!-- ===== Hero — poster-inspired layout ===== -->
   <section class="hero" aria-label="Introduction">
     <div class="hero-inner">
@@ -1271,22 +1103,18 @@
       </div>
     </div>
   </section>
-
   <!-- Tagline bar — matches the red-bar separator on the poster -->
   <div class="hero-tagline-bar" role="presentation">
     <p>Fair Elections. &nbsp; Honest Budgets. &nbsp; <span class="tagline-secondary">Count on it.</span></p>
   </div>
-
   <!-- ===== Your Clerk's Office + Role Cards ===== -->
   <section id="roles" class="section-pad bg-cream" aria-labelledby="roles-heading">
     <div class="section-inner">
       <h2 class="section-heading" id="roles-heading">Your Clerk's Office</h2>
       <p class="section-subheading">One office. Five jobs. One standard of excellence.</p>
-
       <p class="geo-line">
         From Carey to Ketchum, Picabo to Smiley Creek — one Clerk's office serving every community in Blaine County.
       </p>
-
       <div class="role-cards" role="list">
         <article class="role-card" role="listitem">
           <h3>Due Process Done Right.</h3>
@@ -1315,12 +1143,10 @@
       </div>
     </div>
   </section>
-
   <!-- ===== Section Divider ===== -->
   <div class="section-divider" role="presentation" aria-hidden="true">
     <p>Just Records. No Spin.</p>
   </div>
-
   <!-- ===== Why It Matters ===== -->
   <section class="section-pad bg-sand" aria-labelledby="matters-heading">
     <div class="section-inner">
@@ -1349,7 +1175,6 @@
       </div>
     </div>
   </section>
-
   <!-- ===== "I chose Idaho" Quote Block ===== -->
   <section class="quote-block" aria-label="Quote from Stephen Graham">
     <blockquote>
@@ -1357,14 +1182,12 @@
     </blockquote>
     <cite>Stephen Graham</cite>
   </section>
-
   <!-- ===== Partisanship Principle Statement ===== -->
   <section class="quote-block quote-block--alt" aria-label="Principle statement on partisanship">
     <blockquote>
       Partisanship is the natural enemy of sound public service.
     </blockquote>
   </section>
-
   <!-- ===== About Stephen ===== -->
   <section id="about" class="section-pad bg-cream" aria-labelledby="about-heading">
     <div class="section-inner">
@@ -1376,7 +1199,6 @@
       </div>
     </div>
   </section>
-
   <!-- ===== What We've Built ===== -->
   <section id="built" class="section-pad bg-sand" aria-labelledby="built-heading">
     <div class="section-inner">
@@ -1425,7 +1247,6 @@
       </div>
     </div>
   </section>
-
   <!-- ===== In the News ===== -->
   <section id="news" class="section-pad bg-cream" aria-labelledby="news-heading">
     <div class="section-inner">
@@ -1479,7 +1300,6 @@
       </ul>
     </div>
   </section>
-
   <!-- ===== Donate Section ===== -->
   <section id="donate" class="section-pad donate-section" aria-labelledby="donate-heading">
     <div class="section-inner-narrow">
@@ -1489,13 +1309,11 @@
       <p class="transparency-line"><a href="https://sunshine.voteidaho.gov/login" target="_blank" rel="noopener noreferrer">View campaign finance disclosures</a></p>
     </div>
   </section>
-
   <!-- ===== Get Involved ===== -->
   <section id="involve" class="section-pad involve-section" aria-labelledby="involve-heading">
     <div class="section-inner-narrow">
       <h2 class="section-heading" id="involve-heading">Get Involved</h2>
       <p>Volunteer, sign up for updates, or just say hello. Every bit of support makes a difference.</p>
-
       <!-- Mailchimp Embedded Signup Form -->
       <div class="signup-form-wrap" role="form" aria-label="Campaign email updates signup">
         <label class="signup-label" for="mc-email">Get Campaign Updates</label>
@@ -1511,19 +1329,15 @@
         </form>
         <p class="signup-status" id="mc-signup-status" aria-live="polite"></p>
       </div>
-
       <hr class="involve-divider" />
-
       <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up to Volunteer</a>
     </div>
   </section>
-
   <!-- ===== How to Vote / Open Primary Explainer ===== -->
   <section id="vote" class="section-pad vote-info" aria-labelledby="vote-heading">
     <div class="section-inner">
       <h2 class="section-heading" id="vote-heading">How to Vote in This Race</h2>
       <p class="vote-info-lead">Idaho's Democratic primary is <strong>open to every registered voter</strong> — Democrat, Republican, Unaffiliated, any party. You do not need to change your registration. Just request a Democratic ballot at any polling location or during early voting.</p>
-
       <div class="vote-dates">
         <div class="vote-date-card">
           <p class="date-label">Early Voting Begins</p>
@@ -1534,26 +1348,20 @@
           <p class="date-value">May 19</p>
         </div>
       </div>
-
       <p class="vote-countdown" id="vote-countdown" aria-live="polite"></p>
-
       <p class="vote-info-note"><a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Check your voter registration at VoteIdaho.gov</a></p>
     </div>
   </section>
-
   <!-- ===== CTA Banner ===== -->
   <section id="contact" class="cta-banner" aria-labelledby="cta-heading">
     <h2 id="cta-heading">Courts. Budgets. Records. Elections.</h2>
     <p>Done right.</p>
     <a href="mailto:info@grahamforblaine.com" class="btn-primary">Get in Touch: info@grahamforblaine.com</a>
   </section>
-
 </main>
-
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
   <img src="https://grahamforblaine.com/logo_transparent.png" alt="" aria-hidden="true" class="footer-logo" width="120" height="30" />
-
   <!-- Footer quick links -->
   <nav class="footer-links" aria-label="External resources">
     <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Official County Bio</a>
@@ -1561,29 +1369,24 @@
     <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder</a>
     <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">VoteIdaho.gov</a>
   </nav>
-
   <p class="taglines">
     Fair Elections. Honest Budgets. Count on it.<br />
     Just Records. No Spin.
   </p>
   <p>Paid for by Graham for Blaine</p>
 </footer>
-
 <!-- ===== Mobile Nav Toggle Script ===== -->
 <script>
   (function () {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.nav-links');
-
     if (!toggle || !nav) return;
-
     toggle.addEventListener('click', function () {
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('is-open');
       toggle.textContent = expanded ? 'Menu' : 'Close';
     });
-
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -1592,7 +1395,6 @@
         toggle.focus();
       }
     });
-
     document.addEventListener('click', function (e) {
       if (nav.classList.contains('is-open') && !e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -1602,22 +1404,18 @@
     });
   })();
 </script>
-
 <!-- ===== Election Countdown ===== -->
 <script>
   (function () {
     var el = document.getElementById('vote-countdown');
     if (!el) return;
-
     var electionDay = new Date('2026-05-19T00:00:00');
     var earlyVoting = new Date('2026-04-27T00:00:00');
     var now = new Date();
     now.setHours(0, 0, 0, 0);
-
     var msPerDay = 86400000;
     var daysToElection = Math.ceil((electionDay - now) / msPerDay);
     var daysToEarly = Math.ceil((earlyVoting - now) / msPerDay);
-
     if (daysToElection <= 0) {
       return; // Election passed — hide countdown
     } else if (daysToElection === 1) {
