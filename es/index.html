@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Graham — Blaine County Clerk</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://grahamforblaine.com/es" />
+
   <!-- SEO & Social -->
   <meta name="description" content="Stephen Graham — Blaine County Clerk. Elecciones justas. Presupuestos honestos. Puede contar con él." />
   <meta property="og:title" content="Graham for Blaine County Clerk" />
@@ -19,10 +27,19 @@
   <meta name="twitter:description" content="Stephen Graham — Blaine County Clerk. Elecciones justas. Presupuestos honestos. Puede contar con él." />
   <meta name="twitter:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
 
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDEY6CCJQX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GDEY6CCJQX');
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ===== CSS Custom Properties ===== */
@@ -42,14 +59,12 @@
       --color-accent: #b8860b;
       --color-accent-light: #d4a017;
       --color-red: #c0392b;
-
       --space-xs: 0.5rem;
       --space-sm: 1rem;
       --space-md: 1.5rem;
       --space-lg: 2.5rem;
       --space-xl: 4rem;
       --space-2xl: 6rem;
-
       --font-display: 'Montserrat', 'Segoe UI', sans-serif;
       --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
       --text-base: 1rem;
@@ -59,13 +74,11 @@
       --text-2xl: 2rem;
       --text-3xl: 2.75rem;
       --text-4xl: 3.5rem;
-
       --max-width: 72rem;
       --max-width-narrow: 48rem;
       --border-radius: 0.375rem;
     }
-
-    /* ===== Dark mode ===== */
+    /* ===== Dark mode support ===== */
     @media (prefers-color-scheme: dark) {
       :root {
         --color-cream: #1a1a1a;
@@ -81,9 +94,6 @@
         --color-blue-light: #7bb8e3;
       }
     }
-
-    /* Dark mode component overrides placeholder — populated after component rules */
-
     /* ===== Reduced motion ===== */
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -92,19 +102,16 @@
         scroll-behavior: auto;
       }
     }
-
     /* ===== Reset & Base ===== */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     html {
       scroll-behavior: smooth;
       font-size: 100%;
     }
-
     body {
       font-family: var(--font-body);
       font-size: var(--text-base);
@@ -113,13 +120,11 @@
       background-color: var(--color-cream);
       -webkit-font-smoothing: antialiased;
     }
-
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
-
     a {
       color: var(--color-blue);
       text-decoration-thickness: 1px;
@@ -127,23 +132,19 @@
       transition: color 0.2s ease;
     }
     a:hover { color: var(--color-blue-light); }
-
     a:focus-visible {
       outline: 3px solid var(--color-blue);
       outline-offset: 3px;
       border-radius: 2px;
     }
-
     h1, h2, h3, h4 {
       font-family: var(--font-display);
       line-height: 1.2;
       color: var(--color-navy);
     }
-
     @media (prefers-color-scheme: dark) {
       h1, h2, h3, h4 { color: #e0d8cc; }
     }
-
     /* ===== Skip Link ===== */
     .skip-link {
       position: absolute;
@@ -163,7 +164,6 @@
       outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     /* ===== Site Header / Nav ===== */
     .site-header {
       position: fixed;
@@ -174,7 +174,6 @@
       background: var(--color-navy);
       padding: var(--space-xs) var(--space-sm);
     }
-
     .site-header nav {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -183,7 +182,6 @@
       justify-content: space-between;
       gap: var(--space-xs);
     }
-
     .site-header .logo-link {
       display: flex;
       align-items: center;
@@ -192,13 +190,11 @@
       height: 2.5rem;
       width: auto;
     }
-
     .header-right {
       display: flex;
       align-items: center;
       gap: var(--space-xs);
     }
-
     .nav-toggle {
       display: none;
       background: none;
@@ -216,19 +212,16 @@
       align-items: center;
       justify-content: center;
     }
-
     .nav-toggle:focus-visible {
       outline: 3px solid var(--color-sky);
       outline-offset: 2px;
     }
-
     .nav-links {
       display: flex;
       list-style: none;
       gap: var(--space-md);
       align-items: center;
     }
-
     .nav-links a {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
@@ -244,7 +237,6 @@
       outline: 2px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     .lang-toggle {
       font-size: var(--text-sm);
       background: rgba(255,255,255,0.12);
@@ -261,11 +253,9 @@
       background: rgba(255,255,255,0.22);
       color: #ffffff;
     }
-
     /* Mobile nav */
     @media (max-width: 40rem) {
       .nav-toggle { display: flex; }
-
       .nav-links {
         display: none;
         position: absolute;
@@ -279,11 +269,8 @@
         border-top: 1px solid rgba(255,255,255,0.12);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       }
-
       .nav-links.is-open { display: flex; }
-
       .nav-links li { width: 100%; }
-
       .nav-links a {
         display: flex;
         align-items: center;
@@ -291,15 +278,12 @@
         min-height: 44px;
         width: 100%;
       }
-
       .nav-links .lang-toggle-desktop { display: none; }
     }
-
     @media (min-width: 40.0625rem) {
       .nav-toggle { display: none; }
       .lang-toggle-mobile { display: none; }
     }
-
     /* ===== Hero ===== */
     .hero {
       background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
@@ -307,7 +291,6 @@
       padding: 3.5rem 0 var(--space-lg);
       overflow: hidden;
     }
-
     .hero-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -315,7 +298,6 @@
       grid-template-columns: 1fr;
       align-items: center;
     }
-
     .hero .headshot {
       width: 12rem;
       height: 12rem;
@@ -326,12 +308,10 @@
       border: 4px solid rgba(255,255,255,0.25);
       display: block;
     }
-
     .hero-text {
       padding: var(--space-lg) var(--space-sm) var(--space-md);
       text-align: center;
     }
-
     .hero .pre-heading {
       font-family: var(--font-display);
       font-size: var(--text-lg);
@@ -341,13 +321,11 @@
       margin-bottom: 0.15rem;
       letter-spacing: 0.02em;
     }
-
     .hero .hero-name {
       line-height: 1;
       margin: 0;
       color: #ffffff;
     }
-
     .hero .name-first {
       display: block;
       font-family: var(--font-display);
@@ -356,7 +334,6 @@
       color: #9BA4B4;
       line-height: 1.1;
     }
-
     .hero .name-last {
       display: inline-block;
       font-family: var(--font-display);
@@ -365,20 +342,18 @@
       color: #ffffff;
       line-height: 0.95;
       letter-spacing: -0.02em;
-      padding-bottom: 0.3rem;
+      padding-bottom: 0.1rem;
       border-bottom: 4px solid var(--color-red);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.2rem;
     }
-
     .hero .subtitle {
       font-size: var(--text-lg);
       color: #9BA4B4;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-top: 0.25rem;
+      margin-top: 0.1rem;
     }
-
     /* Tagline bar */
     .hero-tagline-bar {
       background: var(--color-sand);
@@ -386,7 +361,6 @@
       text-align: center;
       padding: var(--space-md) var(--space-sm);
     }
-
     .hero-tagline-bar p {
       font-family: var(--font-display);
       font-size: var(--text-xl);
@@ -394,47 +368,42 @@
       color: var(--color-navy);
       letter-spacing: 0.02em;
     }
-
     .hero-tagline-bar .tagline-secondary {
       display: block;
     }
-
     @media (min-width: 40rem) {
       .hero-tagline-bar .tagline-secondary { display: inline; }
     }
-
     @media (prefers-color-scheme: dark) {
+      .hero-tagline-bar {
+        background: var(--color-sand);
+        border-top-color: var(--color-red);
+      }
       .hero-tagline-bar p { color: #e0d8cc; }
     }
-
     @media (min-width: 48rem) {
       .hero-inner {
         grid-template-columns: auto 1fr;
         align-items: center;
       }
-
       .hero .headshot {
         width: 16rem;
         height: 16rem;
         margin: var(--space-md) 0 var(--space-md) var(--space-lg);
       }
-
       .hero-text {
         text-align: left;
         padding: var(--space-xl) var(--space-lg) var(--space-xl);
         align-self: center;
       }
-
       .hero .name-first { font-size: var(--text-3xl); }
       .hero-tagline-bar p { font-size: var(--text-2xl); }
     }
-
     @media (min-width: 64rem) {
       .hero .headshot { width: 18rem; height: 18rem; }
       .hero .pre-heading { font-size: var(--text-xl); }
       .hero .name-first { font-size: var(--text-4xl); }
     }
-
     /* ===== Section Utilities ===== */
     .section-pad {
       padding: var(--space-xl) var(--space-sm);
@@ -442,23 +411,19 @@
     @media (min-width: 48rem) {
       .section-pad { padding: var(--space-2xl) var(--space-md); }
     }
-
     .section-inner {
       max-width: var(--max-width);
       margin: 0 auto;
     }
-
     .section-inner-narrow {
       max-width: var(--max-width-narrow);
       margin: 0 auto;
     }
-
     .section-heading {
       font-size: var(--text-2xl);
       text-align: center;
       margin-bottom: var(--space-xs);
     }
-
     .section-subheading {
       font-family: var(--font-display);
       font-style: italic;
@@ -467,47 +432,84 @@
       text-align: center;
       margin-bottom: var(--space-lg);
     }
-
+    .geo-line {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      text-align: center;
+      margin-bottom: var(--space-lg);
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .bg-sand { background-color: var(--color-sand); }
     .bg-cream { background-color: var(--color-cream); }
     .bg-white { background-color: var(--color-white); }
-
-    /* ===== Content blocks ===== */
-    .content-prose {
-      max-width: var(--max-width-narrow);
-      margin: 0 auto;
-      font-size: var(--text-lg);
-      line-height: 1.75;
-      color: var(--color-text-muted);
-    }
-
-    .content-prose p + p {
-      margin-top: var(--space-sm);
-    }
-
-    /* ===== Highlights ===== */
-    .highlights-grid {
+    /* ===== Role Cards ===== */
+    .role-cards {
       display: grid;
       gap: var(--space-md);
       grid-template-columns: 1fr;
     }
-    @media (min-width: 48rem) {
-      .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 40rem) {
+      .role-cards { grid-template-columns: repeat(2, 1fr); }
     }
-
-    .highlight-item {
-      padding: var(--space-md);
+    @media (min-width: 64rem) {
+      .role-cards { grid-template-columns: repeat(3, 1fr); }
+    }
+    .role-card {
       background: var(--color-white);
-      border-left: 4px solid var(--color-blue);
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      border: 1px solid var(--color-sand-dark);
+      border-left: 3px solid var(--color-blue);
+      border-radius: var(--border-radius);
+      padding: var(--space-md);
+      transition: box-shadow 0.2s ease;
     }
-
-    .highlight-item p {
+    .role-card:hover {
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .role-card h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-xs);
+    }
+    .role-card p {
       color: var(--color-text-muted);
       font-size: var(--text-base);
+      line-height: 1.6;
+    }
+    /* ===== Section Divider ===== */
+    .section-divider {
+      background: var(--color-navy-light);
+      text-align: center;
+      padding: var(--space-md) var(--space-sm);
+    }
+    .section-divider p {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    /* ===== Why It Matters ===== */
+    .matters-list {
+      display: grid;
+      gap: var(--space-md);
+    }
+    .matters-item {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .matters-item h3 {
+      font-size: var(--text-lg);
+      margin-bottom: 0.35rem;
+    }
+    .matters-item p {
+      color: var(--color-text-muted);
       line-height: 1.65;
     }
-
     /* ===== Quote Blocks ===== */
     .quote-block {
       background: var(--color-navy);
@@ -515,7 +517,6 @@
       padding: var(--space-xl) var(--space-sm);
       text-align: center;
     }
-
     .quote-block blockquote {
       max-width: var(--max-width-narrow);
       margin: 0 auto;
@@ -525,22 +526,123 @@
       line-height: 1.5;
       color: rgba(255,255,255,0.92);
     }
-
     .quote-block blockquote::before { content: "\201C"; }
     .quote-block blockquote::after { content: "\201D"; }
-
-    @media (min-width: 48rem) {
-      .quote-block blockquote { font-size: var(--text-2xl); }
+    .quote-block cite {
+      display: block;
+      margin-top: var(--space-sm);
+      font-family: var(--font-body);
+      font-style: normal;
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
-
+    .quote-block--alt {
+      background: var(--color-navy-light);
+    }
     .quote-block a:focus-visible,
     .hero a:focus-visible,
     .site-header a:focus-visible,
-    .cta-banner a:focus-visible {
+    .cta-banner a:focus-visible,
+    .section-divider a:focus-visible {
       outline-color: var(--color-sky);
     }
-
-    /* ===== CTA / Buttons ===== */
+    @media (min-width: 48rem) {
+      .quote-block blockquote { font-size: var(--text-2xl); }
+    }
+    /* ===== About Section ===== */
+    .about-content {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto;
+      font-size: var(--text-lg);
+      line-height: 1.75;
+      color: var(--color-text-muted);
+    }
+    .about-content p + p {
+      margin-top: var(--space-sm);
+    }
+    /* ===== What We've Built ===== */
+    .built-grid {
+      display: grid;
+      gap: var(--space-md);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 48rem) {
+      .built-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .built-item {
+      padding: var(--space-md);
+      background: var(--color-white);
+      border-left: 4px solid var(--color-blue);
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+    .built-item h3 {
+      font-size: var(--text-base);
+      font-family: var(--font-body);
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--color-navy);
+    }
+    .built-item p {
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      line-height: 1.6;
+    }
+    /* ===== In the News ===== */
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: var(--max-width-narrow);
+      margin-inline: auto;
+    }
+    .news-list li {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-sand-dark);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.35rem 0.75rem;
+    }
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+    .news-source {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .news-headline {
+      font-size: var(--text-base);
+      color: var(--color-text);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+    .news-headline:hover {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+    .news-date {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      flex-basis: 100%;
+    }
+    /* ===== Donate Section ===== */
+    .donate-section {
+      background: var(--color-sand);
+      text-align: center;
+    }
+    .donate-section p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+    }
     .btn-primary {
       display: inline-block;
       background: var(--color-blue);
@@ -565,7 +667,6 @@
       outline: 3px solid var(--color-sky);
       outline-offset: 3px;
     }
-
     @media (max-width: 40rem) {
       .btn-primary {
         display: block;
@@ -573,38 +674,6 @@
         text-align: center;
       }
     }
-
-    /* ===== Donate Section ===== */
-    .donate-section {
-      background: var(--color-sand);
-      text-align: center;
-    }
-
-    .donate-section p {
-      font-size: var(--text-lg);
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-md);
-    }
-
-    /* ===== Get Involved Section ===== */
-    .involve-section {
-      background: var(--color-cream);
-      text-align: center;
-    }
-
-    .involve-section p {
-      font-size: var(--text-lg);
-      color: var(--color-text-muted);
-      margin-bottom: var(--space-md);
-      max-width: var(--max-width-narrow);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .involve-section .section-heading {
-      margin-bottom: var(--space-sm);
-    }
-
     /* ===== CTA Banner ===== */
     .cta-banner {
       background: var(--color-navy-light);
@@ -612,13 +681,11 @@
       text-align: center;
       padding: var(--space-lg) var(--space-sm);
     }
-
     .cta-banner h2 {
       font-size: var(--text-xl);
       color: rgba(255,255,255,0.95);
       margin-bottom: var(--space-xs);
     }
-
     .cta-banner p {
       font-family: var(--font-display);
       font-style: italic;
@@ -626,9 +693,7 @@
       color: rgba(255,255,255,0.7);
       margin-bottom: var(--space-md);
     }
-
     .cta-banner a { color: #ffffff; }
-
     /* ===== Footer ===== */
     .site-footer {
       background: var(--color-navy);
@@ -636,15 +701,12 @@
       text-align: center;
       padding: var(--space-lg) var(--space-sm);
     }
-
     .site-footer .footer-logo {
       height: 2rem;
       width: auto;
       margin: 0 auto var(--space-sm);
     }
-
     .site-footer p { font-size: var(--text-sm); }
-
     .site-footer .taglines {
       margin-bottom: var(--space-sm);
       font-family: var(--font-display);
@@ -653,30 +715,250 @@
       color: rgba(255,255,255,0.65);
       line-height: 1.8;
     }
-
     .site-footer a { color: rgba(255,255,255,0.7); }
     .site-footer a:hover { color: #ffffff; }
-
-    /* ===== Dark mode component overrides =====
-       MUST come after all component rules to win on source order */
+    /* ===== Footer Links Row ===== */
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-sm);
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+      padding: var(--space-xs);
+      min-height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    .footer-links a:hover { color: #ffffff; }
+    .footer-links a:focus-visible {
+      outline: 2px solid var(--color-sky);
+      outline-offset: 3px;
+    }
+    /* ===== Transparency line ===== */
+    .transparency-line {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: var(--space-xs);
+    }
+    .transparency-line a {
+      font-weight: 600;
+    }
+    /* ===== Get Involved Section ===== */
+    .involve-section {
+      background: var(--color-cream);
+      text-align: center;
+    }
+    .involve-section p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-md);
+      max-width: var(--max-width-narrow);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .involve-section .section-heading {
+      margin-bottom: var(--space-sm);
+    }
+    /* ===== Mailchimp Signup Form ===== */
+    .signup-form-wrap {
+      max-width: 28rem;
+      margin: 0 auto var(--space-lg);
+      text-align: left;
+    }
+    .signup-form-wrap .signup-label {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: var(--space-sm);
+      display: block;
+      text-align: center;
+    }
     @media (prefers-color-scheme: dark) {
-      .highlight-item {
+      .signup-form-wrap .signup-label {
+        color: #e0d8cc;
+      }
+    }
+    .signup-form-fields {
+      display: flex;
+      gap: var(--space-xs);
+      flex-direction: column;
+    }
+    @media (min-width: 28rem) {
+      .signup-form-fields {
+        flex-direction: row;
+      }
+    }
+    .signup-form-fields input[type="email"] {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      padding: 0.75rem var(--space-sm);
+      border: 2px solid var(--color-sand-dark);
+      border-radius: var(--border-radius);
+      background: var(--color-white);
+      color: var(--color-text);
+      min-height: 2.75rem;
+      transition: border-color 0.2s ease;
+    }
+    .signup-form-fields input[type="email"]:focus {
+      outline: none;
+      border-color: var(--color-blue);
+      box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.15);
+    }
+    .signup-form-fields input[type="email"]::placeholder {
+      color: var(--color-text-light);
+    }
+    .signup-form-fields .btn-signup {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-navy);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s ease;
+    }
+    .signup-form-fields .btn-signup:hover {
+      background: var(--color-navy-light);
+    }
+    .signup-form-fields .btn-signup:focus-visible {
+      outline: 3px solid var(--color-sky);
+      outline-offset: 3px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .signup-form-fields input[type="email"] {
+        border-color: #3a3a3a;
+      }
+      .signup-form-fields .btn-signup {
+        background: var(--color-blue);
+      }
+      .signup-form-fields .btn-signup:hover {
+        background: var(--color-blue-light);
+      }
+    }
+    .signup-status {
+      text-align: center;
+      font-size: var(--text-sm);
+      margin-top: var(--space-xs);
+      min-height: 1.5rem;
+    }
+    .signup-status.success { color: #2d7d46; }
+    .signup-status.error { color: var(--color-red); }
+    @media (prefers-color-scheme: dark) {
+      .signup-status.success { color: #6bc785; }
+    }
+    .involve-divider {
+      width: 3rem;
+      border: none;
+      border-top: 2px solid var(--color-sand-dark);
+      margin: 0 auto var(--space-md);
+    }
+    @media (prefers-color-scheme: dark) {
+      .involve-divider { border-top-color: #3a3a3a; }
+    }
+    /* ===== Vote Info Section ===== */
+    .vote-info {
+      background: var(--color-navy);
+      color: #ffffff;
+      text-align: center;
+    }
+    .vote-info .section-heading {
+      color: #ffffff;
+    }
+    .vote-info-lead {
+      font-size: var(--text-lg);
+      line-height: 1.6;
+      max-width: 38rem;
+      margin: 0 auto var(--space-lg);
+      color: rgba(255,255,255,0.85);
+    }
+    .vote-info-lead strong {
+      color: #ffffff;
+    }
+    .vote-dates {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+    .vote-date-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--border-radius);
+      padding: var(--space-md) var(--space-lg);
+      min-width: 14rem;
+    }
+    .vote-date-card .date-label {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: var(--space-xs);
+    }
+    .vote-date-card .date-value {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .vote-info-note {
+      font-size: var(--text-base);
+      color: rgba(255,255,255,0.85);
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+    .vote-info-note a {
+      color: #7bb8e3;
+      font-weight: 600;
+    }
+    .vote-info-note a:hover { color: #a3d0f0; }
+    .vote-countdown {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: var(--space-md);
+      letter-spacing: 0.02em;
+    }
+    .vote-countdown:empty { display: none; }
+    /* ===== Dark mode component overrides ===== */
+    @media (prefers-color-scheme: dark) {
+      .built-item h3 { color: #e0d8cc; }
+      .role-card {
+        border-color: #3a3a3a;
         border-left-color: var(--color-blue);
       }
-
+      .built-item { border-left-color: var(--color-blue); }
+      .role-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
       .btn-primary { color: #ffffff; }
       .btn-primary:hover { color: #ffffff; }
-
       a { color: #7bb8e3; }
       a:hover { color: #a3d0f0; }
     }
-
     /* ===== Focus ring global fallback ===== */
     :focus-visible {
       outline: 3px solid var(--color-blue);
       outline-offset: 3px;
     }
-
     /* ===== Utility ===== */
     .visually-hidden {
       position: absolute;
@@ -689,28 +971,23 @@
       white-space: nowrap;
       border: 0;
     }
-
     /* ===== Print styles ===== */
     @media print {
       .site-header, .nav-toggle, .btn-primary,
-      .donate-section, .involve-section {
+      .donate-section, .involve-section, .section-divider {
         display: none;
       }
-
       body { font-size: 12pt; color: #000; }
-
       .hero, .quote-block, .cta-banner, .hero-tagline-bar {
         background: #fff;
         color: #000;
       }
-
       .hero .pre-heading, .hero .hero-name, .hero .name-first, .hero .name-last,
       .hero .subtitle, .hero-tagline-bar p,
-      .quote-block blockquote,
+      .quote-block blockquote, .quote-block cite,
       .cta-banner h2, .cta-banner p, .cta-banner a {
         color: #000;
       }
-
       .hero .name-last { border-bottom-color: #000; }
       .hero-tagline-bar { border-top-color: #000; }
     }
@@ -737,8 +1014,10 @@
     </div>
 
     <ul class="nav-links" id="primary-nav" role="list">
-      <li><a href="#logros">Logros</a></li>
+      <li><a href="#roles">La Oficina</a></li>
       <li><a href="#sobre">Sobre Stephen</a></li>
+      <li><a href="#logros">Logros</a></li>
+      <li><a href="#noticias">Noticias</a></li>
       <li><a href="#donar">Donar</a></li>
       <li><a href="#participar">Participar</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -769,53 +1048,206 @@
     <p>Elecciones justas. &nbsp; Presupuestos honestos. &nbsp; <span class="tagline-secondary">Puede contar con él.</span></p>
   </div>
 
-  <!-- ===== Experiencia ===== -->
-  <section class="section-pad bg-cream" aria-labelledby="exp-heading">
+  <!-- ===== La Oficina del Clerk + Role Cards ===== -->
+  <section id="roles" class="section-pad bg-cream" aria-labelledby="roles-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="exp-heading">Experiencia y Preparación</h2>
-      <div class="content-prose">
-        <p>Blaine County Clerk desde 2021.</p>
-        <p>Con una maestría en Política Pública de la Universidad de Georgetown. Cuenta con seis años administrando subvenciones de salud pública de varios millones de dólares, además de su experiencia como auditor y director de presupuesto del condado.</p>
+      <h2 class="section-heading" id="roles-heading">La Oficina del Clerk</h2>
+      <p class="section-subheading">Una oficina. Cinco funciones. Un solo estándar de excelencia.</p>
+
+      <p class="geo-line">
+        De Carey a Ketchum, de Picabo a Smiley Creek — una sola oficina del Clerk sirviendo a cada comunidad del Condado de Blaine.
+      </p>
+
+      <div class="role-cards" role="list">
+        <article class="role-card" role="listitem">
+          <h3>El debido proceso, bien hecho.</h3>
+          <p>La oficina del Clerk administra cada caso presentado en el <a href="https://www.blainecountyid.gov/186/Courts" target="_blank" rel="noopener noreferrer">Tribunal de Distrito del Condado de Blaine</a> — disputas civiles, derecho familiar, procesos penales. Registros precisos. Trámites puntuales. Proceso justo.</p>
+        </article>
+        <article class="role-card" role="listitem">
+          <h3>Presupuestos honestos, presentados con claridad.</h3>
+          <p>Su dinero, contabilizado — hasta el último dólar. Presentado de manera que conecta los <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">fondos públicos</a> con los servicios que producen.</p>
+        </article>
+        <article class="role-card" role="listitem">
+          <h3>Sus registros públicos, protegidos.</h3>
+          <p>Cada escritura, hipoteca, gravamen y registro vital presentado en el Condado de Blaine pasa por la <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">oficina del Recorder</a>. Sistemas modernizados. Archivos precisos. Accesibles para usted.</p>
+        </article>
+        <article class="role-card" role="listitem">
+          <h3>Gobierno local eficiente.</h3>
+          <p>El Clerk mantiene el gobierno del condado funcionando — registrando las <a href="https://www.blainecountyid.gov/AgendaCenter" target="_blank" rel="noopener noreferrer">acciones oficiales de la Junta</a>, cumpliendo solicitudes de registros públicos, y asegurando que el gobierno local opere de manera eficiente y transparente.</p>
+        </article>
+        <article class="role-card" role="listitem">
+          <h3>Servicios comunitarios, entregados con dedicación.</h3>
+          <p>La oficina del Clerk administra asistencia de defensa para indigentes, programas de apoyo a veteranos y beneficios de matrícula universitaria — además de cientos de solicitudes de registros públicos cada año. Servicios que la mayoría desconoce hasta que los necesita.</p>
+        </article>
+        <article class="role-card" role="listitem">
+          <h3>Cada voto contado, siempre.</h3>
+          <p>Participación récord. Certificación puntual. Cumplimiento total con la ley de Idaho. Sus <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">elecciones</a> son seguras, profesionales y no partidistas — exactamente como deben ser.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Tagline Quote ===== -->
-  <section class="quote-block" aria-label="Lema de campaña">
+  <!-- ===== Section Divider ===== -->
+  <div class="section-divider" role="presentation" aria-hidden="true">
+    <p>Solo registros. Sin manipulación.</p>
+  </div>
+
+  <!-- ===== Por qué importa ===== -->
+  <section class="section-pad bg-sand" aria-labelledby="matters-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="matters-heading">Por qué importa</h2>
+      <div class="matters-list">
+        <article class="matters-item">
+          <h3>Su dinero, rastreado y transparente.</h3>
+          <p>La oficina del Clerk administra el presupuesto del Condado de Blaine — cada dólar contabilizado, cada gasto público. Usted merece saber a dónde van sus impuestos y tener la confianza de que alguien está vigilando.</p>
+        </article>
+        <article class="matters-item">
+          <h3>Elecciones dirigidas por profesionales, no por políticos.</h3>
+          <p>Cada boleta contada. Cada plazo cumplido. Cada resultado certificado a tiempo. La administración electoral debe ser precisa, aburrida y no partidista. Así es como lo hacemos. <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Verifique su registro de votante</a> o aprenda más sobre cómo votar en Idaho.</p>
+        </article>
+        <article class="matters-item">
+          <h3>Sus registros y su privacidad, protegidos.</h3>
+          <p>Cada escritura, gravamen e hipoteca presentada en el Condado de Blaine pasa por la oficina del Recorder. Alertas contra fraude, sistemas de registro modernizados y custodia cuidadosa de su información personal — porque registros públicos no significa que su privacidad no importe. <a href="https://blainecountyrecorder.as.me/schedule/62fe4c6c" target="_blank" rel="noopener noreferrer">Programe una cita</a> con la oficina del Recorder.</p>
+        </article>
+        <article class="matters-item">
+          <h3>Un tribunal que funciona para usted.</h3>
+          <p>Ya sea que esté respondiendo a una citación o sirviendo como jurado, la oficina del Clerk mantiene las operaciones judiciales eficientes y accesibles. La oficina también administra asistencia para indigentes, apoyo a veteranos y programas de matrícula universitaria.</p>
+        </article>
+        <article class="matters-item">
+          <h3>Su oficina del Recorder, abierta y accesible.</h3>
+          <p>Citas para pasaportes, licencias de matrimonio y registros de tierras — todo disponible en la <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">oficina del Recorder</a>, incluyendo atención sin cita previa y servicio en español.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== "Elegí Idaho" Quote Block ===== -->
+  <section class="quote-block" aria-label="Cita de Stephen Graham">
     <blockquote>
-      Elecciones justas. Presupuestos honestos. Puede contar con él.
+      Elegí Idaho. Vine aquí, me postulé para un cargo público y construí una carrera sirviendo a esta comunidad.
     </blockquote>
+    <cite>Stephen Graham</cite>
   </section>
 
-  <!-- ===== Logros ===== -->
-  <section id="logros" class="section-pad bg-sand" aria-labelledby="logros-heading">
-    <div class="section-inner">
-      <h2 class="section-heading" id="logros-heading">Lo que hemos logrado</h2>
-      <div class="highlights-grid">
-        <article class="highlight-item">
-          <p>En noviembre de 2025, el Condado de Blaine registró la participación electoral más alta del estado — un logro que refleja la confianza y el compromiso de nuestra comunidad. Cada auditoría financiera ha sido aprobada, demostrando responsabilidad y transparencia.</p>
-        </article>
-        <article class="highlight-item">
-          <p>Stephen modernizó el sistema de registro, ofreciendo acceso gratuito en línea a los índices de registros de tierras, junto con una alerta gratuita contra el fraude de propiedades.</p>
-        </article>
-        <article class="highlight-item">
-          <p>También amplió el acceso a intérpretes en español en los tribunales y en la oficina de registro, y fortaleció las operaciones judiciales que sirven a miles de residentes cada año.</p>
-        </article>
-        <article class="highlight-item">
-          <p>Por ley de Idaho, un solo Clerk electo cumple cinco funciones y Stephen las ha desempeñado todas desde 2021, sirviendo con dedicación a cada comunidad del Condado de Blaine.</p>
-        </article>
-      </div>
-    </div>
+  <!-- ===== Partisanship Principle Statement ===== -->
+  <section class="quote-block quote-block--alt" aria-label="Declaración de principios sobre el partidismo">
+    <blockquote>
+      El partidismo es el enemigo natural del buen servicio público.
+    </blockquote>
   </section>
 
   <!-- ===== Sobre Stephen ===== -->
   <section id="sobre" class="section-pad bg-cream" aria-labelledby="sobre-heading">
     <div class="section-inner">
       <h2 class="section-heading" id="sobre-heading">Sobre Stephen</h2>
-      <div class="content-prose">
-        <p>Llegó a Idaho en 2020, eligió quedarse, compró una casa en Hailey y decidió dar un paso al frente para servir.</p>
-        <p>Hoy, está orgulloso de servir al Condado de Blaine y humildemente solicita su voto.</p>
+      <div class="about-content">
+        <p>Como <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham sirve como Clerk del Tribunal de Distrito, Director de Presupuesto, Director de Elecciones, Auditor Ex-Officio y Recorder Ex-Officio — cinco funciones constitucionales, un solo estándar de excelencia.</p>
+        <p>Stephen llegó a Idaho en 2020 como artista residente en la histórica casa de Ernest Hemingway en Ketchum — y eligió quedarse. Vive en el vecindario de Woodside en Hailey, es concertino de la Orquesta del Valle de Wood River y es intérprete de español certificado por la Corte Suprema de Idaho.</p>
+        <p>Nombrado Clerk por primera vez en septiembre de 2021 y posteriormente electo, Stephen ha administrado nueve elecciones y está liderando la modernización más significativa de los sistemas financieros en la historia del condado. Tiene una maestría en Política Pública de la Universidad de Georgetown y aporta más de una década de experiencia administrando presupuestos multimillonarios — seis años en salud pública internacional antes de servir como director de presupuesto del Condado de Blaine.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== Lo que hemos logrado ===== -->
+  <section id="logros" class="section-pad bg-sand" aria-labelledby="logros-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="logros-heading">Lo que hemos logrado</h2>
+      <div class="built-grid">
+        <article class="built-item">
+          <h3>La participación electoral más alta de Idaho.</h3>
+          <p>El Condado de Blaine registró la <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">participación electoral más alta</a> del estado en las elecciones de noviembre de 2025.</p>
+        </article>
+        <article class="built-item">
+          <h3>Nueve elecciones administradas.</h3>
+          <p>Desde que asumió el cargo en septiembre de 2021, Stephen ha administrado nueve elecciones — cada una a tiempo, dentro del presupuesto y certificada sin incidentes.</p>
+        </article>
+        <article class="built-item">
+          <h3>Folleto informativo para votantes.</h3>
+          <p>Publicó biografías de candidatos y texto de las boletas para que los residentes pudieran prepararse antes del día de elecciones.</p>
+        </article>
+        <article class="built-item">
+          <h3>Más de 150 estudiantes reclutados como trabajadores electorales.</h3>
+          <p>Desde 2023, en asociación con escuelas locales para incorporar estudiantes de preparatoria a las elecciones — construyendo participación cívica desde la base.</p>
+        </article>
+        <article class="built-item">
+          <h3>Registros de tierras modernizados.</h3>
+          <p>Lanzó nuevo <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">software de registro</a> en 2025 después de 18 meses de planificación. Acceso gratuito en línea a índices de documentos, además de alertas contra fraude para propietarios.</p>
+        </article>
+        <article class="built-item">
+          <h3>Sistema financiero empresarial — lanzamiento en verano de 2026.</h3>
+          <p>Liderando la transición del Condado de Blaine a la plataforma financiera empresarial de Tyler Technologies — libro mayor, cuentas por pagar, nómina y presupuesto. Programado para el verano. La modernización más significativa de las operaciones financieras del condado en la historia del Condado de Blaine.</p>
+        </article>
+        <article class="built-item">
+          <h3>Transparencia presupuestaria.</h3>
+          <p>Creó una base de datos analítica de presupuestos de múltiples décadas y publicó un <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">libro de presupuesto anual e informe financiero</a> — para que el público pueda ver a dónde va cada dólar.</p>
+        </article>
+        <article class="built-item">
+          <h3>Internet de banda ancha para Picabo y Carey.</h3>
+          <p>Extendió el acceso a banda ancha a comunidades desatendidas a través de fondos federales ARPA.</p>
+        </article>
+        <article class="built-item">
+          <h3>Acceso lingüístico ampliado.</h3>
+          <p>Patrocinó capacitación avanzada para un intérprete de español certificado por la Corte Suprema de Idaho y personal adicional en proceso de certificación como intérpretes.</p>
+        </article>
+        <article class="built-item">
+          <h3>Conversaciones con Clerks.</h3>
+          <p>Como presidente del Comité de Educación de IACRC, Stephen dirige un programa semanal de mentoría que vincula a nueve clerks nuevos con colegas experimentados — enfocado en transferencia de conocimiento, desafíos de gestión y el oficio del servicio público.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== En las noticias ===== -->
+  <section id="noticias" class="section-pad bg-cream" aria-labelledby="noticias-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="noticias-heading">En las noticias</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/library-district-lands-on-may-ballot/article_9b630067-e23d-45db-a398-ad233de563e5.html" target="_blank" rel="noopener noreferrer">Library district lands on May ballot</a>
+          <span class="news-date">2026</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-to-release-inaugural-year-end-review/article_37782552-d78d-11ef-a13f-678df67480de.html" target="_blank" rel="noopener noreferrer">Blaine County to release inaugural Year-End Review</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/county-clerks-office-rolls-out-new-records-platform/article_879930f2-f84f-11ef-804d-73df3f3129c8.html" target="_blank" rel="noopener noreferrer">County clerk's office rolls out new records platform</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-elections-office-creating-info-pamphlet-for-voters/article_a4bda06a-6b62-4878-830f-7135fa99edd7.html" target="_blank" rel="noopener noreferrer">Blaine County Elections Office creating info pamphlet for voters</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-has-record-voter-turnout/article_9579d168-9d14-11ef-9609-fb8606aa1287.html" target="_blank" rel="noopener noreferrer">Blaine County has record voter turnout</a>
+          <span class="news-date">2024</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/polls-to-be-staffed-by-27-high-school-students/article_20a5cbcc-7cda-11ee-b790-1f99fe88b082.html" target="_blank" rel="noopener noreferrer">Valley polls staffed by 27 high school students</a>
+          <span class="news-date">2023</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/county-commissioners-wrap-up-budget-deliberations/article_5de4f856-2ca7-11ee-96e6-eb6c217ea51b.html" target="_blank" rel="noopener noreferrer">County commissioners wrap up budget deliberations</a>
+          <span class="news-date">2023</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-receives-clean-audit/article_33ab97b8-9412-11ec-887a-4bbee5cad6cc.html" target="_blank" rel="noopener noreferrer">Blaine County receives clean audit</a>
+          <span class="news-date">2022</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-leaders-appoint-new-clerk/article_359c2d76-0c40-11ec-bc8d-43bd3b5253bc.html" target="_blank" rel="noopener noreferrer">Blaine County leaders appoint new clerk</a>
+          <span class="news-date">2021</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -825,6 +1257,7 @@
       <h2 class="section-heading" id="donar-heading">Apoye a Stephen</h2>
       <p>Sus contribuciones mantienen esta campaña. Gracias.</p>
       <a href="https://secure.actblue.com/donate/grahamforblaine" class="btn-primary">Contribuir</a>
+      <p class="transparency-line"><a href="https://sunshine.voteidaho.gov/login" target="_blank" rel="noopener noreferrer">Ver divulgaciones financieras de la campaña</a></p>
     </div>
   </section>
 
@@ -833,7 +1266,49 @@
     <div class="section-inner-narrow">
       <h2 class="section-heading" id="participar-heading">Participe</h2>
       <p>Sea voluntario, inscríbase para recibir noticias, o simplemente diga hola. Cada apoyo cuenta.</p>
+
+      <!-- Mailchimp Embedded Signup Form -->
+      <div class="signup-form-wrap" role="form" aria-label="Inscripción para noticias de la campaña">
+        <label class="signup-label" for="mc-email">Reciba noticias de la campaña</label>
+        <form action="https://grahamforblaine.us14.list-manage.com/subscribe/post?u=4522843f36323ac7f396cc054&amp;id=2cd8b5bb77&amp;f_id=00d846e5f0" method="post" id="mc-signup-form" target="_blank">
+          <div class="signup-form-fields">
+            <input type="email" name="EMAIL" id="mc-email" placeholder="usted@ejemplo.com" required aria-required="true" autocomplete="email" />
+            <button type="submit" class="btn-signup" name="subscribe">Suscribirse</button>
+          </div>
+          <!-- Honeypot field — prevents bot signups -->
+          <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_4522843f36323ac7f396cc054_2cd8b5bb77" tabindex="-1" value="" />
+          </div>
+        </form>
+        <p class="signup-status" id="mc-signup-status" aria-live="polite"></p>
+      </div>
+
+      <hr class="involve-divider" />
+
       <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Inscríbase como voluntario</a>
+    </div>
+  </section>
+
+  <!-- ===== Cómo votar / Primaria abierta ===== -->
+  <section id="votar" class="section-pad vote-info" aria-labelledby="votar-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="votar-heading">Cómo votar en esta elección</h2>
+      <p class="vote-info-lead">La primaria demócrata de Idaho está <strong>abierta a todo votante registrado</strong> — demócrata, republicano, sin afiliación, cualquier partido. No necesita cambiar su registro. Solo solicite una boleta demócrata en cualquier centro de votación o durante la votación anticipada.</p>
+
+      <div class="vote-dates">
+        <div class="vote-date-card">
+          <p class="date-label">Votación anticipada comienza</p>
+          <p class="date-value">27 de abril</p>
+        </div>
+        <div class="vote-date-card">
+          <p class="date-label">Día de elecciones</p>
+          <p class="date-value">19 de mayo</p>
+        </div>
+      </div>
+
+      <p class="vote-countdown" id="vote-countdown" aria-live="polite"></p>
+
+      <p class="vote-info-note"><a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Verifique su registro de votante en VoteIdaho.gov</a></p>
     </div>
   </section>
 
@@ -849,8 +1324,18 @@
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
   <img src="https://grahamforblaine.com/logo_transparent.png" alt="" aria-hidden="true" class="footer-logo" width="120" height="30" />
+
+  <!-- Footer quick links -->
+  <nav class="footer-links" aria-label="Recursos externos">
+    <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Biografía oficial del condado</a>
+    <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">Elecciones</a>
+    <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder</a>
+    <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">VoteIdaho.gov</a>
+  </nav>
+
   <p class="taglines">
     Elecciones justas. Presupuestos honestos. Puede contar con él.<br />
+    Solo registros. Sin manipulación.
   </p>
   <p>Pagado por Graham for Blaine</p>
 </footer>
@@ -860,16 +1345,13 @@
   (function () {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.nav-links');
-
     if (!toggle || !nav) return;
-
     toggle.addEventListener('click', function () {
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('is-open');
       toggle.textContent = expanded ? 'Menú' : 'Cerrar';
     });
-
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -878,7 +1360,6 @@
         toggle.focus();
       }
     });
-
     document.addEventListener('click', function (e) {
       if (nav.classList.contains('is-open') && !e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
         toggle.setAttribute('aria-expanded', 'false');
@@ -888,5 +1369,32 @@
     });
   })();
 </script>
+
+<!-- ===== Election Countdown ===== -->
+<script>
+  (function () {
+    var el = document.getElementById('vote-countdown');
+    if (!el) return;
+    var electionDay = new Date('2026-05-19T00:00:00');
+    var earlyVoting = new Date('2026-04-27T00:00:00');
+    var now = new Date();
+    now.setHours(0, 0, 0, 0);
+    var msPerDay = 86400000;
+    var daysToElection = Math.ceil((electionDay - now) / msPerDay);
+    var daysToEarly = Math.ceil((earlyVoting - now) / msPerDay);
+    if (daysToElection <= 0) {
+      return;
+    } else if (daysToElection === 1) {
+      el.textContent = 'Mañana es el día de elecciones.';
+    } else if (daysToEarly <= 0) {
+      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de elecciones.';
+    } else if (daysToEarly === 1) {
+      el.textContent = 'La votación anticipada comienza mañana.';
+    } else {
+      el.textContent = 'Faltan ' + daysToElection + ' días para el día de elecciones.';
+    }
+  })();
+</script>
+
 </body>
 </html>
