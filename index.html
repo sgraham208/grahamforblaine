@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephen Graham — Blaine County Clerk</title>
-
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://grahamforblaine.com/es" />
-
+  <link rel="canonical" href="https://grahamforblaine.com/" />
   <!-- SEO & Social -->
-  <meta name="description" content="Stephen Graham — Blaine County Clerk. Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta name="description" content="Stephen Graham for Blaine County Clerk. Fair Elections. Honest Budgets. Count on it." />
   <meta property="og:title" content="Graham for Blaine County Clerk" />
-  <meta property="og:description" content="Stephen Graham — Blaine County Clerk. Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta property="og:description" content="Fair Elections. Honest Budgets. Count on it." />
   <meta property="og:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
   <meta property="og:image:width" content="2400" />
   <meta property="og:image:height" content="1260" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://grahamforblaine.com/es" />
+  <meta property="og:url" content="https://grahamforblaine.com" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Graham for Blaine County Clerk" />
-  <meta name="twitter:description" content="Stephen Graham — Blaine County Clerk. Elecciones justas. Presupuestos honestos. Puede contar con él." />
+  <meta name="twitter:description" content="Fair Elections. Honest Budgets. Count on it." />
   <meta name="twitter:image" content="https://grahamforblaine.com/graham_og_2400x1260.png" />
-
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDEY6CCJQX"></script>
   <script>
@@ -35,15 +31,14 @@
     gtag('js', new Date());
     gtag('config', 'G-GDEY6CCJQX');
   </script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-
   <style>
     /* ===== CSS Custom Properties ===== */
     :root {
+      /* Colors — civic, trustworthy palette */
       --color-navy: #1a2744;
       --color-navy-light: #243456;
       --color-blue: #2e5c8a;
@@ -59,12 +54,14 @@
       --color-accent: #b8860b;
       --color-accent-light: #d4a017;
       --color-red: #c0392b;
+      /* Spacing scale */
       --space-xs: 0.5rem;
       --space-sm: 1rem;
       --space-md: 1.5rem;
       --space-lg: 2.5rem;
       --space-xl: 4rem;
       --space-2xl: 6rem;
+      /* Typography */
       --font-display: 'Montserrat', 'Segoe UI', sans-serif;
       --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
       --text-base: 1rem;
@@ -74,6 +71,7 @@
       --text-2xl: 2rem;
       --text-3xl: 2.75rem;
       --text-4xl: 3.5rem;
+      /* Layout */
       --max-width: 72rem;
       --max-width-narrow: 48rem;
       --border-radius: 0.375rem;
@@ -255,7 +253,9 @@
     }
     /* Mobile nav */
     @media (max-width: 40rem) {
-      .nav-toggle { display: flex; }
+      .nav-toggle {
+        display: flex;
+      }
       .nav-links {
         display: none;
         position: absolute;
@@ -269,8 +269,12 @@
         border-top: 1px solid rgba(255,255,255,0.12);
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       }
-      .nav-links.is-open { display: flex; }
-      .nav-links li { width: 100%; }
+      .nav-links.is-open {
+        display: flex;
+      }
+      .nav-links li {
+        width: 100%;
+      }
       .nav-links a {
         display: flex;
         align-items: center;
@@ -278,13 +282,19 @@
         min-height: 44px;
         width: 100%;
       }
-      .nav-links .lang-toggle-desktop { display: none; }
+      .nav-links .lang-toggle-desktop {
+        display: none;
+      }
     }
     @media (min-width: 40.0625rem) {
-      .nav-toggle { display: none; }
-      .lang-toggle-mobile { display: none; }
+      .nav-toggle {
+        display: none;
+      }
+      .lang-toggle-mobile {
+        display: none;
+      }
     }
-    /* ===== Hero ===== */
+    /* ===== Hero — poster-inspired layout ===== */
     .hero {
       background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
       color: #ffffff;
@@ -354,7 +364,7 @@
       text-transform: uppercase;
       margin-top: 0.1rem;
     }
-    /* Tagline bar */
+    /* Tagline bar beneath hero */
     .hero-tagline-bar {
       background: var(--color-sand);
       border-top: 4px solid var(--color-red);
@@ -372,14 +382,18 @@
       display: block;
     }
     @media (min-width: 40rem) {
-      .hero-tagline-bar .tagline-secondary { display: inline; }
+      .hero-tagline-bar .tagline-secondary {
+        display: inline;
+      }
     }
     @media (prefers-color-scheme: dark) {
       .hero-tagline-bar {
         background: var(--color-sand);
         border-top-color: var(--color-red);
       }
-      .hero-tagline-bar p { color: #e0d8cc; }
+      .hero-tagline-bar p {
+        color: #e0d8cc;
+      }
     }
     @media (min-width: 48rem) {
       .hero-inner {
@@ -396,13 +410,24 @@
         padding: var(--space-xl) var(--space-lg) var(--space-xl);
         align-self: center;
       }
-      .hero .name-first { font-size: var(--text-3xl); }
-      .hero-tagline-bar p { font-size: var(--text-2xl); }
+      .hero .name-first {
+        font-size: var(--text-3xl);
+      }
+      .hero-tagline-bar p {
+        font-size: var(--text-2xl);
+      }
     }
     @media (min-width: 64rem) {
-      .hero .headshot { width: 18rem; height: 18rem; }
-      .hero .pre-heading { font-size: var(--text-xl); }
-      .hero .name-first { font-size: var(--text-4xl); }
+      .hero .headshot {
+        width: 18rem;
+        height: 18rem;
+      }
+      .hero .pre-heading {
+        font-size: var(--text-xl);
+      }
+      .hero .name-first {
+        font-size: var(--text-4xl);
+      }
     }
     /* ===== Section Utilities ===== */
     .section-pad {
@@ -693,7 +718,9 @@
       color: rgba(255,255,255,0.7);
       margin-bottom: var(--space-md);
     }
-    .cta-banner a { color: #ffffff; }
+    .cta-banner a {
+      color: #ffffff;
+    }
     /* ===== Footer ===== */
     .site-footer {
       background: var(--color-navy);
@@ -706,7 +733,9 @@
       width: auto;
       margin: 0 auto var(--space-sm);
     }
-    .site-footer p { font-size: var(--text-sm); }
+    .site-footer p {
+      font-size: var(--text-sm);
+    }
     .site-footer .taglines {
       margin-bottom: var(--space-sm);
       font-family: var(--font-display);
@@ -715,7 +744,9 @@
       color: rgba(255,255,255,0.65);
       line-height: 1.8;
     }
-    .site-footer a { color: rgba(255,255,255,0.7); }
+    .site-footer a {
+      color: rgba(255,255,255,0.7);
+    }
     .site-footer a:hover { color: #ffffff; }
     /* ===== Footer Links Row ===== */
     .footer-links {
@@ -752,6 +783,23 @@
     }
     .transparency-line a {
       font-weight: 600;
+    }
+    /* ===== Focus ring global fallback ===== */
+    :focus-visible {
+      outline: 3px solid var(--color-blue);
+      outline-offset: 3px;
+    }
+    /* ===== Utility ===== */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
     }
     /* ===== Get Involved Section ===== */
     .involve-section {
@@ -858,8 +906,12 @@
       margin-top: var(--space-xs);
       min-height: 1.5rem;
     }
-    .signup-status.success { color: #2d7d46; }
-    .signup-status.error { color: var(--color-red); }
+    .signup-status.success {
+      color: #2d7d46;
+    }
+    .signup-status.error {
+      color: var(--color-red);
+    }
     @media (prefers-color-scheme: dark) {
       .signup-status.success { color: #6bc785; }
     }
@@ -870,7 +922,9 @@
       margin: 0 auto var(--space-md);
     }
     @media (prefers-color-scheme: dark) {
-      .involve-divider { border-top-color: #3a3a3a; }
+      .involve-divider {
+        border-top-color: #3a3a3a;
+      }
     }
     /* ===== Vote Info Section ===== */
     .vote-info {
@@ -930,7 +984,9 @@
       color: #7bb8e3;
       font-weight: 600;
     }
-    .vote-info-note a:hover { color: #a3d0f0; }
+    .vote-info-note a:hover {
+      color: #a3d0f0;
+    }
     .vote-countdown {
       font-family: var(--font-body);
       font-size: var(--text-base);
@@ -939,37 +995,42 @@
       margin-bottom: var(--space-md);
       letter-spacing: 0.02em;
     }
-    .vote-countdown:empty { display: none; }
-    /* ===== Dark mode component overrides ===== */
+    .vote-countdown:empty {
+      display: none;
+    }
+    /* ===== Dark mode component overrides =====
+       MUST come after all component rules to win on specificity + source order */
     @media (prefers-color-scheme: dark) {
-      .built-item h3 { color: #e0d8cc; }
+      /* Built-item h3: --color-navy resolves to #0f1825 on #1e1e1e — invisible */
+      .built-item h3 {
+        color: #e0d8cc;
+      }
+      /* Card borders: --color-sand-dark resolves to #2a2a2a on #1e1e1e — invisible */
       .role-card {
         border-color: #3a3a3a;
         border-left-color: var(--color-blue);
       }
-      .built-item { border-left-color: var(--color-blue); }
-      .role-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
-      .btn-primary { color: #ffffff; }
-      .btn-primary:hover { color: #ffffff; }
-      a { color: #7bb8e3; }
-      a:hover { color: #a3d0f0; }
-    }
-    /* ===== Focus ring global fallback ===== */
-    :focus-visible {
-      outline: 3px solid var(--color-blue);
-      outline-offset: 3px;
-    }
-    /* ===== Utility ===== */
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
+      .built-item {
+        border-left-color: var(--color-blue);
+      }
+      /* Role card hover shadow needs to be visible in dark mode */
+      .role-card:hover {
+        box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      }
+      /* Buttons: ensure text stays white on the lighter blue background */
+      .btn-primary {
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        color: #ffffff;
+      }
+      /* Links in body content — ensure adequate contrast on dark backgrounds */
+      a {
+        color: #7bb8e3;
+      }
+      a:hover {
+        color: #a3d0f0;
+      }
     }
     /* ===== Print styles ===== */
     @media print {
@@ -977,7 +1038,10 @@
       .donate-section, .involve-section, .section-divider {
         display: none;
       }
-      body { font-size: 12pt; color: #000; }
+      body {
+        font-size: 12pt;
+        color: #000;
+      }
       .hero, .quote-block, .cta-banner, .hero-tagline-bar {
         background: #fff;
         color: #000;
@@ -988,52 +1052,49 @@
       .cta-banner h2, .cta-banner p, .cta-banner a {
         color: #000;
       }
-      .hero .name-last { border-bottom-color: #000; }
-      .hero-tagline-bar { border-top-color: #000; }
+      .hero .name-last {
+        border-bottom-color: #000;
+      }
+      .hero-tagline-bar {
+        border-top-color: #000;
+      }
     }
   </style>
 </head>
 <body>
-
 <!-- Skip Navigation -->
-<a href="#main" class="skip-link">Ir al contenido principal</a>
-
+<a href="#main" class="skip-link">Skip to main content</a>
 <!-- ===== Site Header ===== -->
 <header class="site-header">
-  <nav aria-label="Navegación principal">
-    <a href="/" class="logo-link" aria-label="Graham for Blaine County Clerk — home">
-      <img src="https://grahamforblaine.com/logo_transparent.png" alt="Graham for Blaine County Clerk" width="160" height="40" />
+  <nav aria-label="Primary navigation">
+    <a href="#" class="logo-link" aria-label="Graham for Blaine County Clerk — return to top">
+      <img src="https://grahamforblaine.com/logo_transparent.png" alt="Graham for Blaine County Clerk — home" width="160" height="40" />
     </a>
-
     <div class="header-right">
-      <a href="/" class="lang-toggle lang-toggle-mobile" lang="en" aria-label="View in English">English</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
-        Menú
+      <a href="/es" class="lang-toggle lang-toggle-mobile" lang="es" aria-label="Ver en español">Español</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
+        Menu
       </button>
     </div>
-
     <ul class="nav-links" id="primary-nav" role="list">
-      <li><a href="#roles">La Oficina</a></li>
-      <li><a href="#sobre">Sobre Stephen</a></li>
-      <li><a href="#logros">Logros</a></li>
-      <li><a href="#noticias">Noticias</a></li>
-      <li><a href="#donar">Donar</a></li>
-      <li><a href="#participar">Participar</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="/" class="lang-toggle lang-toggle-desktop" lang="en" aria-label="View in English">English</a></li>
+      <li><a href="#roles">The Office</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#built">Record</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#involve">Get Involved</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/es" class="lang-toggle lang-toggle-desktop" lang="es" aria-label="Ver en español">Español</a></li>
     </ul>
   </nav>
 </header>
-
 <main id="main">
-
-  <!-- ===== Hero ===== -->
-  <section class="hero" aria-label="Introducción">
+  <!-- ===== Hero — poster-inspired layout ===== -->
+  <section class="hero" aria-label="Introduction">
     <div class="hero-inner">
       <img src="https://grahamforblaine.com/headshot.jpg?v=2" alt="Stephen Graham, Blaine County Clerk" class="headshot" width="288" height="288" />
       <div class="hero-text">
-        <p class="pre-heading">Reelija</p>
+        <p class="pre-heading">Re-Elect</p>
         <h1 class="hero-name">
           <span class="name-first">Stephen</span>
           <span class="name-last">Graham.</span>
@@ -1042,165 +1103,154 @@
       </div>
     </div>
   </section>
-
-  <!-- Tagline bar -->
+  <!-- Tagline bar — matches the red-bar separator on the poster -->
   <div class="hero-tagline-bar" role="presentation">
-    <p>Elecciones justas. &nbsp; Presupuestos honestos. &nbsp; <span class="tagline-secondary">Puede contar con él.</span></p>
+    <p>Fair Elections. &nbsp; Honest Budgets. &nbsp; <span class="tagline-secondary">Count on it.</span></p>
   </div>
-
-  <!-- ===== La Oficina del Clerk + Role Cards ===== -->
+  <!-- ===== Your Clerk's Office + Role Cards ===== -->
   <section id="roles" class="section-pad bg-cream" aria-labelledby="roles-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="roles-heading">La Oficina del Clerk</h2>
-      <p class="section-subheading">Una oficina. Cinco funciones. Un solo estándar de excelencia.</p>
-
+      <h2 class="section-heading" id="roles-heading">Your Clerk's Office</h2>
+      <p class="section-subheading">One office. Five jobs. One standard of excellence.</p>
       <p class="geo-line">
-        De Carey a Ketchum, de Picabo a Smiley Creek — una sola oficina del Clerk sirviendo a cada comunidad del Condado de Blaine.
+        From Carey to Ketchum, Picabo to Smiley Creek — one Clerk's office serving every community in Blaine County.
       </p>
-
       <div class="role-cards" role="list">
         <article class="role-card" role="listitem">
-          <h3>El debido proceso, bien hecho.</h3>
-          <p>La oficina del Clerk administra cada caso presentado en el <a href="https://www.blainecountyid.gov/186/Courts" target="_blank" rel="noopener noreferrer">Tribunal de Distrito del Condado de Blaine</a> — disputas civiles, derecho familiar, procesos penales. Registros precisos. Trámites puntuales. Proceso justo.</p>
+          <h3>Due Process Done Right.</h3>
+          <p>Your Clerk's office manages every case filed in <a href="https://www.blainecountyid.gov/186/Courts" target="_blank" rel="noopener noreferrer">Blaine County District Court</a> — civil disputes, family law, felony proceedings. Accurate records. Timely filings. Fair process.</p>
         </article>
         <article class="role-card" role="listitem">
-          <h3>Presupuestos honestos, presentados con claridad.</h3>
-          <p>Su dinero, contabilizado — hasta el último dólar. Presentado de manera que conecta los <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">fondos públicos</a> con los servicios que producen.</p>
+          <h3>Honest Budgets, Presented Clearly.</h3>
+          <p>Your money, accounted for — down to the dollar. Presented in a way that links <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">public funds</a> to the services they produce.</p>
         </article>
         <article class="role-card" role="listitem">
-          <h3>Sus registros públicos, protegidos.</h3>
-          <p>Cada escritura, hipoteca, gravamen y registro vital presentado en el Condado de Blaine pasa por la <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">oficina del Recorder</a>. Sistemas modernizados. Archivos precisos. Accesibles para usted.</p>
+          <h3>Your Public Records, Protected.</h3>
+          <p>Every deed, mortgage, lien, and vital record filed in Blaine County passes through the <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder's office</a>. Modernized systems. Accurate archives. Accessible to you.</p>
         </article>
         <article class="role-card" role="listitem">
-          <h3>Gobierno local eficiente.</h3>
-          <p>El Clerk mantiene el gobierno del condado funcionando — registrando las <a href="https://www.blainecountyid.gov/AgendaCenter" target="_blank" rel="noopener noreferrer">acciones oficiales de la Junta</a>, cumpliendo solicitudes de registros públicos, y asegurando que el gobierno local opere de manera eficiente y transparente.</p>
+          <h3>Small Government Done Well.</h3>
+          <p>The Clerk keeps county government running — recording the <a href="https://www.blainecountyid.gov/AgendaCenter" target="_blank" rel="noopener noreferrer">Board's official actions</a>, fulfilling public records requests, and making sure the gears of local government turn efficiently and transparently.</p>
         </article>
         <article class="role-card" role="listitem">
-          <h3>Servicios comunitarios, entregados con dedicación.</h3>
-          <p>La oficina del Clerk administra asistencia de defensa para indigentes, programas de apoyo a veteranos y beneficios de matrícula universitaria — además de cientos de solicitudes de registros públicos cada año. Servicios que la mayoría desconoce hasta que los necesita.</p>
+          <h3>Community Services, Quietly Delivered.</h3>
+          <p>The Clerk's office administers indigent defense assistance, veterans support programs, and junior college tuition benefits — plus hundreds of public records requests each year. Services most people don't know about until they need them.</p>
         </article>
         <article class="role-card" role="listitem">
-          <h3>Cada voto contado, siempre.</h3>
-          <p>Participación récord. Certificación puntual. Cumplimiento total con la ley de Idaho. Sus <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">elecciones</a> son seguras, profesionales y no partidistas — exactamente como deben ser.</p>
+          <h3>Every Vote Counted, Every Time.</h3>
+          <p>Record turnout. On-time certification. Full compliance with Idaho law. Your <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">elections</a> are secure, professional, and nonpartisan — exactly how they should be.</p>
         </article>
       </div>
     </div>
   </section>
-
   <!-- ===== Section Divider ===== -->
   <div class="section-divider" role="presentation" aria-hidden="true">
-    <p>Solo registros. Sin manipulación.</p>
+    <p>Just Records. No Spin.</p>
   </div>
-
-  <!-- ===== Por qué importa ===== -->
+  <!-- ===== Why It Matters ===== -->
   <section class="section-pad bg-sand" aria-labelledby="matters-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="matters-heading">Por qué importa</h2>
+      <h2 class="section-heading" id="matters-heading">Why It Matters</h2>
       <div class="matters-list">
         <article class="matters-item">
-          <h3>Su dinero, rastreado y transparente.</h3>
-          <p>La oficina del Clerk administra el presupuesto del Condado de Blaine — cada dólar contabilizado, cada gasto público. Usted merece saber a dónde van sus impuestos y tener la confianza de que alguien está vigilando.</p>
+          <h3>Your money, tracked and transparent.</h3>
+          <p>The Clerk's office manages Blaine County's budget — every dollar accounted for, every expenditure public. You deserve to know where your tax dollars go and confidence that someone is watching.</p>
         </article>
         <article class="matters-item">
-          <h3>Elecciones dirigidas por profesionales, no por políticos.</h3>
-          <p>Cada boleta contada. Cada plazo cumplido. Cada resultado certificado a tiempo. La administración electoral debe ser precisa, aburrida y no partidista. Así es como lo hacemos. <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Verifique su registro de votante</a> o aprenda más sobre cómo votar en Idaho.</p>
+          <h3>Elections run by professionals, not politicians.</h3>
+          <p>Every ballot counted. Every deadline met. Every result certified on time. Election administration should be boring, precise, and nonpartisan. That's how we run it. <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Check your voter registration</a> or learn more about voting in Idaho.</p>
         </article>
         <article class="matters-item">
-          <h3>Sus registros y su privacidad, protegidos.</h3>
-          <p>Cada escritura, gravamen e hipoteca presentada en el Condado de Blaine pasa por la oficina del Recorder. Alertas contra fraude, sistemas de registro modernizados y custodia cuidadosa de su información personal — porque registros públicos no significa que su privacidad no importe. <a href="https://blainecountyrecorder.as.me/schedule/62fe4c6c" target="_blank" rel="noopener noreferrer">Programe una cita</a> con la oficina del Recorder.</p>
+          <h3>Your records and your privacy, protected.</h3>
+          <p>Every deed, lien, and mortgage filed in Blaine County passes through the Recorder's office. Fraud Notify alerts, modernized recording systems, and careful stewardship of your personal information — because public records don't mean your privacy doesn't matter. <a href="https://blainecountyrecorder.as.me/schedule/62fe4c6c" target="_blank" rel="noopener noreferrer">Schedule an appointment</a> with the Recorder's office.</p>
         </article>
         <article class="matters-item">
-          <h3>Un tribunal que funciona para usted.</h3>
-          <p>Ya sea que esté respondiendo a una citación o sirviendo como jurado, la oficina del Clerk mantiene las operaciones judiciales eficientes y accesibles. La oficina también administra asistencia para indigentes, apoyo a veteranos y programas de matrícula universitaria.</p>
+          <h3>A courthouse that works for you.</h3>
+          <p>Whether you're responding to a citation or serving on a jury, the Clerk's office keeps court operations efficient and accessible. The office also administers indigent assistance, veterans support, and junior college tuition programs.</p>
         </article>
         <article class="matters-item">
-          <h3>Su oficina del Recorder, abierta y accesible.</h3>
-          <p>Citas para pasaportes, licencias de matrimonio y registros de tierras — todo disponible en la <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">oficina del Recorder</a>, incluyendo atención sin cita previa y servicio en español.</p>
+          <h3>Your Recorder's office, open and accessible.</h3>
+          <p>Passport appointments, marriage licenses, and land records — all available at the <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder's office</a>, including walk-ins and Spanish language support.</p>
         </article>
       </div>
     </div>
   </section>
-
-  <!-- ===== "Elegí Idaho" Quote Block ===== -->
-  <section class="quote-block" aria-label="Cita de Stephen Graham">
+  <!-- ===== "I chose Idaho" Quote Block ===== -->
+  <section class="quote-block" aria-label="Quote from Stephen Graham">
     <blockquote>
-      Elegí Idaho. Vine aquí, me postulé para un cargo público y construí una carrera sirviendo a esta comunidad.
+      I chose Idaho. I came here, ran for office, and built a career serving this community.
     </blockquote>
     <cite>Stephen Graham</cite>
   </section>
-
   <!-- ===== Partisanship Principle Statement ===== -->
-  <section class="quote-block quote-block--alt" aria-label="Declaración de principios sobre el partidismo">
+  <section class="quote-block quote-block--alt" aria-label="Principle statement on partisanship">
     <blockquote>
-      El partidismo es el enemigo natural del buen servicio público.
+      Partisanship is the natural enemy of sound public service.
     </blockquote>
   </section>
-
-  <!-- ===== Sobre Stephen ===== -->
-  <section id="sobre" class="section-pad bg-cream" aria-labelledby="sobre-heading">
+  <!-- ===== About Stephen ===== -->
+  <section id="about" class="section-pad bg-cream" aria-labelledby="about-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="sobre-heading">Sobre Stephen</h2>
+      <h2 class="section-heading" id="about-heading">About Stephen</h2>
       <div class="about-content">
-        <p>Como <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham sirve como Clerk del Tribunal de Distrito, Director de Presupuesto, Director de Elecciones, Auditor Ex-Officio y Recorder Ex-Officio — cinco funciones constitucionales, un solo estándar de excelencia.</p>
-        <p>Stephen llegó a Idaho en 2020 como artista residente en la histórica casa de Ernest Hemingway en Ketchum — y eligió quedarse. Vive en el vecindario de Woodside en Hailey, es concertino de la Orquesta del Valle de Wood River y es intérprete de español certificado por la Corte Suprema de Idaho.</p>
-        <p>Nombrado Clerk por primera vez en septiembre de 2021 y posteriormente electo, Stephen ha administrado nueve elecciones y está liderando la modernización más significativa de los sistemas financieros en la historia del condado. Tiene una maestría en Política Pública de la Universidad de Georgetown y aporta más de una década de experiencia administrando presupuestos multimillonarios — seis años en salud pública internacional antes de servir como director de presupuesto del Condado de Blaine.</p>
+        <p>As <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham serves as Clerk of the District Court, Chief Budget Officer, Chief Elections Officer, Ex-Officio Auditor, and Ex-Officio Recorder — five constitutional roles, one standard of excellence.</p>
+        <p>Stephen came to Idaho in 2020 as an artist-in-residence at Ernest Hemingway's historic home in Ketchum — and chose to stay. He lives in the Woodside neighborhood in Hailey, serves as Concertmaster of the Wood River Valley Orchestra, and is an Idaho Supreme Court&ndash;certified Spanish interpreter.</p>
+        <p>First appointed Clerk in September 2021 and subsequently elected, Stephen has administered nine elections and is leading the most significant financial systems modernization in county history. He holds a Master of Public Policy from Georgetown University and brings over a decade of experience managing multi-million-dollar budgets — six years in international public health before serving as Blaine County's chief budget officer.</p>
       </div>
     </div>
   </section>
-
-  <!-- ===== Lo que hemos logrado ===== -->
-  <section id="logros" class="section-pad bg-sand" aria-labelledby="logros-heading">
+  <!-- ===== What We've Built ===== -->
+  <section id="built" class="section-pad bg-sand" aria-labelledby="built-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="logros-heading">Lo que hemos logrado</h2>
+      <h2 class="section-heading" id="built-heading">What We've Built</h2>
       <div class="built-grid">
         <article class="built-item">
-          <h3>La participación electoral más alta de Idaho.</h3>
-          <p>El Condado de Blaine registró la <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">participación electoral más alta</a> del estado en las elecciones de noviembre de 2025.</p>
+          <h3>Highest voter turnout in Idaho.</h3>
+          <p>Blaine County recorded the <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">highest voter turnout</a> in the state in the November 2025 election.</p>
         </article>
         <article class="built-item">
-          <h3>Nueve elecciones administradas.</h3>
-          <p>Desde que asumió el cargo en septiembre de 2021, Stephen ha administrado nueve elecciones — cada una a tiempo, dentro del presupuesto y certificada sin incidentes.</p>
+          <h3>Nine elections administered.</h3>
+          <p>Since taking office in September 2021, Stephen has administered nine elections — every one on time, on budget, and certified without incident.</p>
         </article>
         <article class="built-item">
-          <h3>Folleto informativo para votantes.</h3>
-          <p>Publicó biografías de candidatos y texto de las boletas para que los residentes pudieran prepararse antes del día de elecciones.</p>
+          <h3>Voter information pamphlet.</h3>
+          <p>Published candidate biographies and ballot text so residents could prepare before Election Day.</p>
         </article>
         <article class="built-item">
-          <h3>Más de 150 estudiantes reclutados como trabajadores electorales.</h3>
-          <p>Desde 2023, en asociación con escuelas locales para incorporar estudiantes de preparatoria a las elecciones — construyendo participación cívica desde la base.</p>
+          <h3>150+ student poll workers recruited.</h3>
+          <p>Since 2023, partnering with local schools to bring high school students into elections — building civic engagement from the ground up.</p>
         </article>
         <article class="built-item">
-          <h3>Registros de tierras modernizados.</h3>
-          <p>Lanzó nuevo <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">software de registro</a> en 2025 después de 18 meses de planificación. Acceso gratuito en línea a índices de documentos, además de alertas contra fraude para propietarios.</p>
+          <h3>Modernized land records.</h3>
+          <p>Launched new <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">recording software</a> in 2025 after 18 months of planning. Free online access to document indexes, plus Fraud Notify alerts for property owners.</p>
         </article>
         <article class="built-item">
-          <h3>Sistema financiero empresarial — lanzamiento en verano de 2026.</h3>
-          <p>Liderando la transición del Condado de Blaine a la plataforma financiera empresarial de Tyler Technologies — libro mayor, cuentas por pagar, nómina y presupuesto. Programado para el verano. La modernización más significativa de las operaciones financieras del condado en la historia del Condado de Blaine.</p>
+          <h3>Enterprise financial system — going live summer 2026.</h3>
+          <p>Leading Blaine County's transition to Tyler Technologies' enterprise financial platform — general ledger, accounts payable, payroll, and budgeting. On schedule for summer go-live. The most significant modernization of county financial operations in Blaine County history.</p>
         </article>
         <article class="built-item">
-          <h3>Transparencia presupuestaria.</h3>
-          <p>Creó una base de datos analítica de presupuestos de múltiples décadas y publicó un <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">libro de presupuesto anual e informe financiero</a> — para que el público pueda ver a dónde va cada dólar.</p>
+          <h3>Budget transparency.</h3>
+          <p>Built a multi-decade budget analytics database and published an <a href="https://www.blainecountyid.gov/360/Finances" target="_blank" rel="noopener noreferrer">annual budget book and financial report</a> — so the public can see where every dollar goes.</p>
         </article>
         <article class="built-item">
-          <h3>Internet de banda ancha para Picabo y Carey.</h3>
-          <p>Extendió el acceso a banda ancha a comunidades desatendidas a través de fondos federales ARPA.</p>
+          <h3>Broadband to Picabo and Carey.</h3>
+          <p>Extended broadband access to underserved communities through federal ARPA funding.</p>
         </article>
         <article class="built-item">
-          <h3>Acceso lingüístico ampliado.</h3>
-          <p>Patrocinó capacitación avanzada para un intérprete de español certificado por la Corte Suprema de Idaho y personal adicional en proceso de certificación como intérpretes.</p>
+          <h3>Expanded language access.</h3>
+          <p>Sponsored advanced training for an Idaho Supreme Court–certified Spanish interpreter and additional staff pursuing interpreter certification.</p>
         </article>
         <article class="built-item">
-          <h3>Conversaciones con Clerks.</h3>
-          <p>Como presidente del Comité de Educación de IACRC, Stephen dirige un programa semanal de mentoría que vincula a nueve clerks nuevos con colegas experimentados — enfocado en transferencia de conocimiento, desafíos de gestión y el oficio del servicio público.</p>
+          <h3>Conversations with Clerks.</h3>
+          <p>As chair of the IACRC Education Committee, Stephen leads a weekly mentorship program pairing nine new and newer clerks with experienced colleagues — focused on knowledge transfer, management challenges, and the craft of public service.</p>
         </article>
       </div>
     </div>
   </section>
-
-  <!-- ===== En las noticias ===== -->
-  <section id="noticias" class="section-pad bg-cream" aria-labelledby="noticias-heading">
+  <!-- ===== In the News ===== -->
+  <section id="news" class="section-pad bg-cream" aria-labelledby="news-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="noticias-heading">En las noticias</h2>
+      <h2 class="section-heading" id="news-heading">In the News</h2>
       <ul class="news-list">
         <li>
           <span class="news-source">Idaho Mtn Express</span>
@@ -1250,30 +1300,27 @@
       </ul>
     </div>
   </section>
-
-  <!-- ===== Donar ===== -->
-  <section id="donar" class="section-pad donate-section" aria-labelledby="donar-heading">
+  <!-- ===== Donate Section ===== -->
+  <section id="donate" class="section-pad donate-section" aria-labelledby="donate-heading">
     <div class="section-inner-narrow">
-      <h2 class="section-heading" id="donar-heading">Apoye a Stephen</h2>
-      <p>Sus contribuciones mantienen esta campaña. Gracias.</p>
-      <a href="https://secure.actblue.com/donate/grahamforblaine" class="btn-primary">Contribuir</a>
-      <p class="transparency-line"><a href="https://sunshine.voteidaho.gov/login" target="_blank" rel="noopener noreferrer">Ver divulgaciones financieras de la campaña</a></p>
+      <h2 class="section-heading" id="donate-heading">Support Stephen</h2>
+      <p>Your contributions keep this campaign running. Thank you.</p>
+      <a href="https://secure.actblue.com/donate/grahamforblaine" class="btn-primary">Contribute</a>
+      <p class="transparency-line"><a href="https://sunshine.voteidaho.gov/login" target="_blank" rel="noopener noreferrer">View campaign finance disclosures</a></p>
     </div>
   </section>
-
-  <!-- ===== Participar ===== -->
-  <section id="participar" class="section-pad involve-section" aria-labelledby="participar-heading">
+  <!-- ===== Get Involved ===== -->
+  <section id="involve" class="section-pad involve-section" aria-labelledby="involve-heading">
     <div class="section-inner-narrow">
-      <h2 class="section-heading" id="participar-heading">Participe</h2>
-      <p>Sea voluntario, inscríbase para recibir noticias, o simplemente diga hola. Cada apoyo cuenta.</p>
-
+      <h2 class="section-heading" id="involve-heading">Get Involved</h2>
+      <p>Volunteer, sign up for updates, or just say hello. Every bit of support makes a difference.</p>
       <!-- Mailchimp Embedded Signup Form -->
-      <div class="signup-form-wrap" role="form" aria-label="Inscripción para noticias de la campaña">
-        <label class="signup-label" for="mc-email">Reciba noticias de la campaña</label>
+      <div class="signup-form-wrap" role="form" aria-label="Campaign email updates signup">
+        <label class="signup-label" for="mc-email">Get Campaign Updates</label>
         <form action="https://grahamforblaine.us14.list-manage.com/subscribe/post?u=4522843f36323ac7f396cc054&amp;id=2cd8b5bb77&amp;f_id=00d846e5f0" method="post" id="mc-signup-form" target="_blank">
           <div class="signup-form-fields">
-            <input type="email" name="EMAIL" id="mc-email" placeholder="usted@ejemplo.com" required aria-required="true" autocomplete="email" />
-            <button type="submit" class="btn-signup" name="subscribe">Suscribirse</button>
+            <input type="email" name="EMAIL" id="mc-email" placeholder="you@example.com" required aria-required="true" autocomplete="email" />
+            <button type="submit" class="btn-signup" name="subscribe">Subscribe</button>
           </div>
           <!-- Honeypot field — prevents bot signups -->
           <div aria-hidden="true" style="position: absolute; left: -5000px;">
@@ -1282,69 +1329,57 @@
         </form>
         <p class="signup-status" id="mc-signup-status" aria-live="polite"></p>
       </div>
-
       <hr class="involve-divider" />
-
-      <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Inscríbase como voluntario</a>
+      <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up to Volunteer</a>
     </div>
   </section>
-
-  <!-- ===== Cómo votar / Primaria abierta ===== -->
-  <section id="votar" class="section-pad vote-info" aria-labelledby="votar-heading">
+  <!-- ===== How to Vote / Open Primary Explainer ===== -->
+  <section id="vote" class="section-pad vote-info" aria-labelledby="vote-heading">
     <div class="section-inner">
-      <h2 class="section-heading" id="votar-heading">Cómo votar en esta elección</h2>
-      <p class="vote-info-lead">La primaria demócrata de Idaho está <strong>abierta a todo votante registrado</strong> — demócrata, republicano, sin afiliación, cualquier partido. No necesita cambiar su registro. Solo solicite una boleta demócrata en cualquier centro de votación o durante la votación anticipada.</p>
-
+      <h2 class="section-heading" id="vote-heading">How to Vote in This Race</h2>
+      <p class="vote-info-lead">Idaho's Democratic primary is <strong>open to every registered voter</strong> — Democrat, Republican, Unaffiliated, any party. You do not need to change your registration. Just request a Democratic ballot at any polling location or during early voting.</p>
       <div class="vote-dates">
         <div class="vote-date-card">
-          <p class="date-label">Votación anticipada comienza</p>
-          <p class="date-value">27 de abril</p>
+          <p class="date-label">Early Voting Begins</p>
+          <p class="date-value">April 27</p>
         </div>
         <div class="vote-date-card">
-          <p class="date-label">Fecha límite para voto ausente</p>
-          <p class="date-value">8 de mayo</p>
+          <p class="date-label">Absentee Ballot Deadline</p>
+          <p class="date-value">May 8</p>
         </div>
         <div class="vote-date-card">
-          <p class="date-label">Día de elecciones</p>
-          <p class="date-value">19 de mayo</p>
+          <p class="date-label">Election Day</p>
+          <p class="date-value">May 19</p>
         </div>
       </div>
-
       <p class="vote-countdown" id="vote-countdown" aria-live="polite"></p>
-
-      <p class="vote-info-note">Puede <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">solicitar una boleta de voto ausente en VoteIdaho.gov</a> desde ahora hasta el 8 de mayo.</p>
-      <p class="vote-info-note"><a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Verifique su registro de votante en VoteIdaho.gov</a></p>
+      <p class="vote-info-note">You can <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">request an absentee ballot at VoteIdaho.gov</a> now through May 8.</p>
+      <p class="vote-info-note"><a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Check your voter registration at VoteIdaho.gov</a></p>
     </div>
   </section>
-
   <!-- ===== CTA Banner ===== -->
-  <section id="contacto" class="cta-banner" aria-labelledby="contacto-heading">
-    <h2 id="contacto-heading">Tribunales. Presupuestos. Registros. Elecciones.</h2>
-    <p>Hechos bien.</p>
-    <a href="mailto:info@grahamforblaine.com" class="btn-primary">Contáctenos: info@grahamforblaine.com</a>
+  <section id="contact" class="cta-banner" aria-labelledby="cta-heading">
+    <h2 id="cta-heading">Courts. Budgets. Records. Elections.</h2>
+    <p>Done right.</p>
+    <a href="mailto:info@grahamforblaine.com" class="btn-primary">Get in Touch: info@grahamforblaine.com</a>
   </section>
-
 </main>
-
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
   <img src="https://grahamforblaine.com/logo_transparent.png" alt="" aria-hidden="true" class="footer-logo" width="120" height="30" />
-
   <!-- Footer quick links -->
-  <nav class="footer-links" aria-label="Recursos externos">
-    <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Biografía oficial del condado</a>
-    <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">Elecciones</a>
+  <nav class="footer-links" aria-label="External resources">
+    <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Official County Bio</a>
+    <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">Elections</a>
     <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">Recorder</a>
     <a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">VoteIdaho.gov</a>
   </nav>
-
   <p class="taglines">
-    Elecciones justas. Presupuestos honestos. Puede contar con él.<br />
-    Solo registros. Sin manipulación.
+    Fair Elections. Honest Budgets. Count on it.<br />
+    Just Records. No Spin.
   </p>
-  <p>Pagado por Graham for Blaine</p>
+  <p>Paid for by Graham for Blaine</p>
 </footer>
-
 <!-- ===== Mobile Nav Toggle Script ===== -->
 <script>
   (function () {
@@ -1355,13 +1390,13 @@
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('is-open');
-      toggle.textContent = expanded ? 'Menú' : 'Cerrar';
+      toggle.textContent = expanded ? 'Menu' : 'Close';
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) {
         toggle.setAttribute('aria-expanded', 'false');
         nav.classList.remove('is-open');
-        toggle.textContent = 'Menú';
+        toggle.textContent = 'Menu';
         toggle.focus();
       }
     });
@@ -1369,12 +1404,11 @@
       if (nav.classList.contains('is-open') && !e.target.closest('.nav-links') && !e.target.closest('.nav-toggle')) {
         toggle.setAttribute('aria-expanded', 'false');
         nav.classList.remove('is-open');
-        toggle.textContent = 'Menú';
+        toggle.textContent = 'Menu';
       }
     });
   })();
 </script>
-
 <!-- ===== Election Countdown ===== -->
 <script>
   (function () {
@@ -1388,18 +1422,17 @@
     var daysToElection = Math.ceil((electionDay - now) / msPerDay);
     var daysToEarly = Math.ceil((earlyVoting - now) / msPerDay);
     if (daysToElection <= 0) {
-      return;
+      return; // Election passed — hide countdown
     } else if (daysToElection === 1) {
-      el.textContent = 'Mañana es el día de elecciones.';
+      el.textContent = 'Tomorrow is Election Day.';
     } else if (daysToEarly <= 0) {
-      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de elecciones.';
+      el.textContent = 'Early voting is open now \u2014 ' + daysToElection + ' days until Election Day.';
     } else if (daysToEarly === 1) {
-      el.textContent = 'La votación anticipada comienza mañana.';
+      el.textContent = 'Early voting starts tomorrow.';
     } else {
-      el.textContent = 'Faltan ' + daysToElection + ' días para el día de elecciones.';
+      el.textContent = daysToElection + ' days until Election Day.';
     }
   })();
 </script>
-
 </body>
 </html>
