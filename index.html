@@ -705,6 +705,56 @@
       line-height: 1.6;
     }
 
+    /* ===== In the News ===== */
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-width: var(--max-width-narrow);
+      margin-inline: auto;
+    }
+
+    .news-list li {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-sand-dark);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.35rem 0.75rem;
+    }
+
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+
+    .news-source {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    .news-headline {
+      font-size: var(--text-base);
+      color: var(--color-text);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .news-headline:hover {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+
+    .news-date {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      flex-basis: 100%;
+    }
+
     /* ===== Donate Section ===== */
     .donate-section {
       background: var(--color-sand);
@@ -1196,6 +1246,7 @@
       <li><a href="#roles">The Office</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#built">Record</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#donate">Donate</a></li>
       <li><a href="#involve">Get Involved</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1372,6 +1423,60 @@
           <p>As chair of the IACRC Education Committee, Stephen leads a weekly mentorship program pairing nine new and newer clerks with experienced colleagues — focused on knowledge transfer, management challenges, and the craft of public service.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== In the News ===== -->
+  <section id="news" class="section-pad bg-cream" aria-labelledby="news-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="news-heading">In the News</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/library-district-lands-on-may-ballot/article_9b630067-e23d-45db-a398-ad233de563e5.html" target="_blank" rel="noopener noreferrer">Library district lands on May ballot</a>
+          <span class="news-date">2026</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-to-release-inaugural-year-end-review/article_37782552-d78d-11ef-a13f-678df67480de.html" target="_blank" rel="noopener noreferrer">Blaine County to release inaugural Year-End Review</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/county-clerks-office-rolls-out-new-records-platform/article_879930f2-f84f-11ef-804d-73df3f3129c8.html" target="_blank" rel="noopener noreferrer">County clerk's office rolls out new records platform</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-elections-office-creating-info-pamphlet-for-voters/article_a4bda06a-6b62-4878-830f-7135fa99edd7.html" target="_blank" rel="noopener noreferrer">Blaine County Elections Office creating info pamphlet for voters</a>
+          <span class="news-date">2025</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-has-record-voter-turnout/article_9579d168-9d14-11ef-9609-fb8606aa1287.html" target="_blank" rel="noopener noreferrer">Blaine County has record voter turnout</a>
+          <span class="news-date">2024</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/polls-to-be-staffed-by-27-high-school-students/article_20a5cbcc-7cda-11ee-b790-1f99fe88b082.html" target="_blank" rel="noopener noreferrer">Valley polls staffed by 27 high school students</a>
+          <span class="news-date">2023</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/county-commissioners-wrap-up-budget-deliberations/article_5de4f856-2ca7-11ee-96e6-eb6c217ea51b.html" target="_blank" rel="noopener noreferrer">County commissioners wrap up budget deliberations</a>
+          <span class="news-date">2023</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-receives-clean-audit/article_33ab97b8-9412-11ec-887a-4bbee5cad6cc.html" target="_blank" rel="noopener noreferrer">Blaine County receives clean audit</a>
+          <span class="news-date">2022</span>
+        </li>
+        <li>
+          <span class="news-source">Idaho Mtn Express</span>
+          <a class="news-headline" href="https://www.mtexpress.com/news/blaine_county/blaine-county-leaders-appoint-new-clerk/article_359c2d76-0c40-11ec-bc8d-43bd3b5253bc.html" target="_blank" rel="noopener noreferrer">Blaine County leaders appoint new clerk</a>
+          <span class="news-date">2021</span>
+        </li>
+      </ul>
     </div>
   </section>
 
