@@ -1014,6 +1014,90 @@
       }
     }
 
+    /* ===== Vote Info Section ===== */
+    .vote-info {
+      background: var(--color-navy);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .vote-info .section-heading {
+      color: #ffffff;
+    }
+
+    .vote-info-lead {
+      font-size: var(--text-lg);
+      line-height: 1.6;
+      max-width: 38rem;
+      margin: 0 auto var(--space-lg);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .vote-info-lead strong {
+      color: #ffffff;
+    }
+
+    .vote-dates {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+
+    .vote-date-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--border-radius);
+      padding: var(--space-md) var(--space-lg);
+      min-width: 14rem;
+    }
+
+    .vote-date-card .date-label {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: var(--space-xs);
+    }
+
+    .vote-date-card .date-value {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .vote-info-note {
+      font-size: var(--text-base);
+      color: rgba(255,255,255,0.85);
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    .vote-info-note a {
+      color: #7bb8e3;
+      font-weight: 600;
+    }
+    .vote-info-note a:hover {
+      color: #a3d0f0;
+    }
+
+    .vote-countdown {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: var(--space-md);
+      letter-spacing: 0.02em;
+    }
+
+    .vote-countdown:empty {
+      display: none;
+    }
+
     /* ===== Dark mode component overrides =====
        MUST come after all component rules to win on specificity + source order */
     @media (prefers-color-scheme: dark) {
@@ -1170,6 +1254,10 @@
           <p>The Clerk keeps county government running — recording the <a href="https://www.blainecountyid.gov/AgendaCenter" target="_blank" rel="noopener noreferrer">Board's official actions</a>, fulfilling public records requests, and making sure the gears of local government turn efficiently and transparently.</p>
         </article>
         <article class="role-card" role="listitem">
+          <h3>Community Services, Quietly Delivered.</h3>
+          <p>The Clerk's office administers indigent defense assistance, veterans support programs, and junior college tuition benefits — plus hundreds of public records requests each year. Services most people don't know about until they need them.</p>
+        </article>
+        <article class="role-card" role="listitem">
           <h3>Every Vote Counted, Every Time.</h3>
           <p>Record turnout. On-time certification. Full compliance with Idaho law. Your <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">elections</a> are secure, professional, and nonpartisan — exactly how they should be.</p>
         </article>
@@ -1231,9 +1319,9 @@
     <div class="section-inner">
       <h2 class="section-heading" id="about-heading">About Stephen</h2>
       <div class="about-content">
-        <p>As <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham serves as Clerk of the District Court, Ex-Officio Auditor, Chief Budget Officer, Ex-Officio Recorder, and Chief Elections Officer — five constitutional roles, one standard of excellence.</p>
-        <p>Stephen lives in the Woodside neighborhood in Hailey and serves as Concertmaster of the Wood River Valley Orchestra, a community orchestra. He came to Idaho in 2020 as an artist-in-residence at Ernest Hemingway's historic home in Ketchum — and stayed.</p>
-        <p>He was first appointed Blaine County Clerk in September 2021 and subsequently won election. He holds a Master of Public Policy from Georgetown University and brings over a decade of experience managing multi-million-dollar budgets — six years in international public health and five years as Blaine County's chief budget officer.</p>
+        <p>As <a href="https://www.blainecountyid.gov/900/Clerk-Stephen-F-Graham" target="_blank" rel="noopener noreferrer">Blaine County Clerk</a>, Stephen Graham serves as Clerk of the District Court, Chief Budget Officer, Chief Elections Officer, Ex-Officio Auditor, and Ex-Officio Recorder — five constitutional roles, one standard of excellence.</p>
+        <p>Stephen came to Idaho in 2020 as an artist-in-residence at Ernest Hemingway's historic home in Ketchum — and chose to stay. He lives in the Woodside neighborhood in Hailey, serves as Concertmaster of the Wood River Valley Orchestra, and is an Idaho Supreme Court&ndash;certified Spanish interpreter.</p>
+        <p>First appointed Clerk in September 2021 and subsequently elected, Stephen has administered nine elections and is leading the most significant financial systems modernization in county history. He holds a Master of Public Policy from Georgetown University and brings over a decade of experience managing multi-million-dollar budgets — six years in international public health before serving as Blaine County's chief budget officer.</p>
       </div>
     </div>
   </section>
@@ -1248,6 +1336,10 @@
           <p>Blaine County recorded the <a href="https://www.blainecountyid.gov/196/Elections" target="_blank" rel="noopener noreferrer">highest voter turnout</a> in the state in the November 2025 election.</p>
         </article>
         <article class="built-item">
+          <h3>Nine elections administered.</h3>
+          <p>Since taking office in September 2021, Stephen has administered nine elections — every one on time, on budget, and certified without incident.</p>
+        </article>
+        <article class="built-item">
           <h3>Voter information pamphlet.</h3>
           <p>Published candidate biographies and ballot text so residents could prepare before Election Day.</p>
         </article>
@@ -1260,8 +1352,8 @@
           <p>Launched new <a href="https://www.blainecountyid.gov/1294/County-Recorder" target="_blank" rel="noopener noreferrer">recording software</a> in 2025 after 18 months of planning. Free online access to document indexes, plus Fraud Notify alerts for property owners.</p>
         </article>
         <article class="built-item">
-          <h3>Enterprise financial system rollout.</h3>
-          <p>Leading Blaine County's transition to an enterprise-grade financial platform — the most significant modernization of county financial operations in Blaine County history.</p>
+          <h3>Enterprise financial system — going live summer 2026.</h3>
+          <p>Leading Blaine County's transition to Tyler Technologies' enterprise financial platform — general ledger, accounts payable, payroll, and budgeting. On schedule for summer go-live. The most significant modernization of county financial operations in Blaine County history.</p>
         </article>
         <article class="built-item">
           <h3>Budget transparency.</h3>
@@ -1274,6 +1366,10 @@
         <article class="built-item">
           <h3>Expanded language access.</h3>
           <p>Sponsored advanced training for an Idaho Supreme Court–certified Spanish interpreter and additional staff pursuing interpreter certification.</p>
+        </article>
+        <article class="built-item">
+          <h3>Conversations with Clerks.</h3>
+          <p>As chair of the IACRC Education Committee, Stephen leads a weekly mentorship program pairing nine new and newer clerks with experienced colleagues — focused on knowledge transfer, management challenges, and the craft of public service.</p>
         </article>
       </div>
     </div>
@@ -1314,6 +1410,29 @@
       <hr class="involve-divider" />
 
       <a href="https://forms.gle/WTKKv5YWy8cezEHV6" class="btn-primary" target="_blank" rel="noopener noreferrer">Sign Up to Volunteer</a>
+    </div>
+  </section>
+
+  <!-- ===== How to Vote / Open Primary Explainer ===== -->
+  <section id="vote" class="section-pad vote-info" aria-labelledby="vote-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="vote-heading">How to Vote in This Race</h2>
+      <p class="vote-info-lead">Idaho's Democratic primary is <strong>open to every registered voter</strong> — Democrat, Republican, Unaffiliated, any party. You do not need to change your registration. Just request a Democratic ballot at any polling location or during early voting.</p>
+
+      <div class="vote-dates">
+        <div class="vote-date-card">
+          <p class="date-label">Early Voting Begins</p>
+          <p class="date-value">April 27</p>
+        </div>
+        <div class="vote-date-card">
+          <p class="date-label">Election Day</p>
+          <p class="date-value">May 19</p>
+        </div>
+      </div>
+
+      <p class="vote-countdown" id="vote-countdown" aria-live="polite"></p>
+
+      <p class="vote-info-note"><a href="https://voteidaho.gov" target="_blank" rel="noopener noreferrer">Check your voter registration at VoteIdaho.gov</a></p>
     </div>
   </section>
 
@@ -1376,6 +1495,35 @@
         toggle.textContent = 'Menu';
       }
     });
+  })();
+</script>
+
+<!-- ===== Election Countdown ===== -->
+<script>
+  (function () {
+    var el = document.getElementById('vote-countdown');
+    if (!el) return;
+
+    var electionDay = new Date('2026-05-19T00:00:00');
+    var earlyVoting = new Date('2026-04-27T00:00:00');
+    var now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    var msPerDay = 86400000;
+    var daysToElection = Math.ceil((electionDay - now) / msPerDay);
+    var daysToEarly = Math.ceil((earlyVoting - now) / msPerDay);
+
+    if (daysToElection <= 0) {
+      return; // Election passed — hide countdown
+    } else if (daysToElection === 1) {
+      el.textContent = 'Tomorrow is Election Day.';
+    } else if (daysToEarly <= 0) {
+      el.textContent = 'Early voting is open now \u2014 ' + daysToElection + ' days until Election Day.';
+    } else if (daysToEarly === 1) {
+      el.textContent = 'Early voting starts tomorrow.';
+    } else {
+      el.textContent = daysToElection + ' days until Election Day.';
+    }
   })();
 </script>
 </body>
