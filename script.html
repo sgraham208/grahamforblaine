@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Canvass Script — Graham for Blaine</title>
+<style>
+:root {
+  --navy: #1a2744;
+  --blue: #2e5c8a;
+  --sky: #5a9fd4;
+  --sand: #f5f0e8;
+  --cream: #faf8f4;
+  --red: #c0392b;
+  --gold: #b8860b;
+  --text: #2c2c2c;
+  --muted: #5a5a5a;
+  --light: #8a8278;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100dvh;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Top bar */
+.topbar {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topbar h1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.breadcrumb {
+  font-size: 0.75rem;
+  color: var(--sky);
+  opacity: 0.8;
+}
+
+/* Cards */
+.card {
+  display: none;
+  flex-direction: column;
+  padding: 1.25rem 1rem 6rem;
+  animation: fadeIn 0.2s ease;
+}
+.card.active { display: flex; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.card-label {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+.card h2 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+/* Script lines */
+.say {
+  background: #fff;
+  border-left: 3px solid var(--blue);
+  padding: 0.85rem 1rem;
+  margin: 0.6rem 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.say.alt {
+  border-left-color: var(--gold);
+  background: #fefcf6;
+}
+
+/* Stage directions / notes */
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0.5rem 0;
+  line-height: 1.45;
+  padding: 0 0.25rem;
+}
+
+/* Section text */
+.text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0.4rem 0;
+  color: var(--text);
+}
+
+/* Branching buttons */
+.branches {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.branch-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 2px solid var(--sand);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--navy);
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.branch-btn:active { background: var(--sand); border-color: var(--blue); }
+.branch-btn::after { content: '→'; color: var(--blue); font-size: 1.1rem; margin-left: 0.5rem; flex-shrink: 0; }
+
+/* Topic pills for the bridge question */
+.topic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.topic-btn {
+  background: #fff;
+  border: 2px solid var(--sand);
+  border-radius: 10px;
+  padding: 0.7rem 0.6rem;
+  font-size: 0.85rem;
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--navy);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.15s, background 0.15s;
+}
+.topic-btn:active { background: var(--sand); border-color: var(--blue); }
+
+/* Back button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  margin-bottom: 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+}
+.back-btn::before { content: '←'; }
+
+/* Warn / do-not box */
+.warn {
+  background: #fdf2f2;
+  border: 1px solid #e8c4c4;
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  margin: 0.6rem 0;
+  font-size: 0.85rem;
+  color: #8b3a3a;
+  line-height: 1.45;
+}
+
+/* Highlight tip */
+.tip {
+  background: #f0f6ff;
+  border: 1px solid #c4d8f0;
+  border-radius: 8px;
+  padding: 0.7rem 0.85rem;
+  margin: 0.6rem 0;
+  font-size: 0.85rem;
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+/* Sub-branch (follow-up) */
+.followup {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--sand);
+}
+.followup-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--light);
+  margin-bottom: 0.4rem;
+}
+
+/* Checklist */
+.checklist { list-style: none; margin: 0.5rem 0; }
+.checklist li {
+  padding: 0.4rem 0 0.4rem 1.6rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.checklist li::before {
+  content: '☐';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-size: 1.1rem;
+}
+
+/* Divider */
+hr { border: none; border-top: 1px solid var(--sand); margin: 1rem 0; }
+
+/* Mental frame bottom card */
+.mental {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.mental em { color: var(--sky); font-style: normal; }
+
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a1a; color: #e8e4dc; }
+  .card-label { color: var(--sky); }
+  .card h2 { color: #fff; }
+  .say { background: #242424; color: #e8e4dc; }
+  .say.alt { background: #2a2520; }
+  .branch-btn { background: #242424; color: #e8e4dc; border-color: #333; }
+  .branch-btn:active { background: #2a2a2a; }
+  .topic-btn { background: #242424; color: #e8e4dc; border-color: #333; }
+  .topic-btn:active { background: #2a2a2a; }
+  .note { color: #a89e94; }
+  .text { color: #e8e4dc; }
+  .warn { background: #2a1a1a; border-color: #4a2a2a; color: #e8a0a0; }
+  .tip { background: #1a2230; border-color: #2a3a50; color: #c0d4ec; }
+  hr { border-top-color: #333; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card.active { animation: none; }
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="topbar">
+  <h1>Canvass Script</h1>
+  <span class="breadcrumb" id="crumb">Start</span>
+</div>
+
+<!-- ========== START ========== -->
+<div class="card active" id="start">
+  <div class="card-label">Before You Knock</div>
+  <h2>Pre-Door Checklist</h2>
+  <ul class="checklist">
+    <li>Palm card in hand</li>
+    <li>Check voter name on app</li>
+    <li>Phone charged, $1 QR ready</li>
+    <li>grahamforblaine.com/sign bookmarked</li>
+  </ul>
+  <hr>
+  <p class="note">Approach from the street side. Smile. Relaxed posture. You're a neighbor, not a salesman.</p>
+  <div class="mental">
+    You are the sitting Clerk showing respect by showing up. The ask is simple: <em>keep doing the job.</em><br><br>
+    The unaffiliated voter is your margin. The open primary is the mechanism. The learning curve argument is the closer.<br><br>
+    <em>"Confidence without theater."</em>
+  </div>
+  <div class="branches">
+    <button class="branch-btn" onclick="go('knock')">Ready — Go to the door</button>
+  </div>
+</div>
+
+<!-- ========== KNOCK ========== -->
+<div class="card" id="knock">
+  <button class="back-btn" onclick="go('start')">Back</button>
+  <div class="card-label">The Knock</div>
+  <h2>Opening</h2>
+  <p class="note">Knock firmly, three times. Step back. If there's a Ring doorbell, look at it and smile.</p>
+  <div class="say">
+    "Hi — I'm Stephen Graham. I'm your Blaine County Clerk, and I'm running for re-election in the May primary. I'm out meeting voters today. Do you have a quick minute?"
+  </div>
+  <div class="branches">
+    <button class="branch-btn" onclick="go('bridge')">They say yes</button>
+    <button class="branch-btn" onclick="go('exit')">No / bad time</button>
+    <button class="branch-btn" onclick="go('noanswer')">No answer</button>
+  </div>
+</div>
+
+<!-- ========== BRIDGE QUESTION ========== -->
+<div class="card" id="bridge">
+  <button class="back-btn" onclick="go('knock')">Back</button>
+  <div class="card-label">Conversation — 60-90 sec max</div>
+  <h2>The Bridge Question</h2>
+  <div class="say">
+    "Is there anything about the Clerk's office — elections, courts, public records, the county budget — that matters to you or that you'd like to know more about?"
+  </div>
+  <p class="note">Then shut up and listen. If they already know something, acknowledge it — don't recite the talking point.</p>
+  <h2 style="font-size:1rem; margin-top:1rem;">What did they raise?</h2>
+  <div class="topic-grid">
+    <button class="topic-btn" onclick="go('elections')">Elections / Voting</button>
+    <button class="topic-btn" onclick="go('budget')">Budget / Taxes</button>
+    <button class="topic-btn" onclick="go('courts')">Courts / Legal</button>
+    <button class="topic-btn" onclick="go('recording')">Recording / Property</button>
+    <button class="topic-btn" onclick="go('dontknow')">Nothing specific</button>
+    <button class="topic-btn" onclick="go('outside')">Not Clerk's office</button>
+  </div>
+  <hr>
+  <p class="text" style="font-size:0.85rem; color: var(--muted);">Or jump to a situation:</p>
+  <div class="branches">
+    <button class="branch-btn" onclick="go('opponent')">They mention the opponent</button>
+    <button class="branch-btn" onclick="go('partyid')">Party ID came up</button>
+    <button class="branch-btn" onclick="go('countyemp')">They're a county employee</button>
+    <button class="branch-btn" onclick="go('strong')">They're clearly supportive</button>
+    <button class="branch-btn" onclick="go('hostile')">Hostile / not interested</button>
+  </div>
+</div>
+
+<!-- ========== ELECTIONS ========== -->
+<div class="card" id="elections">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Elections / Voting</h2>
+  <div class="say">
+    "Good — that's the one that keeps me up at night. We've run the highest voter turnout in the state. Every ballot counted, every deadline met, every result certified on time. I take that personally."
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they push toward election-denier territory</div>
+    <div class="say alt">
+      "Blaine County's elections are transparent, auditable, and accurate. I'm proud of that and I'll defend it. But I try to stay focused on the work, not the noise."
+    </div>
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== BUDGET ========== -->
+<div class="card" id="budget">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Budget / Taxes</h2>
+  <div class="say">
+    "I'm the county's budget officer — that's a statutory role most people don't know the Clerk has. We're replacing a twenty-year-old system with modern financial software — the biggest upgrade in county history. It goes live this summer. That's not the kind of project you hand off midstream."
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they ask about the system</div>
+    <div class="say alt">
+      "Tyler Technologies — it's the industry standard for municipal ERP. We're migrating everything: general ledger, accounts payable, payroll, budgeting. On schedule for summer go-live."
+    </div>
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they ask about transition risk</div>
+    <div class="say alt">
+      "I'll be transparent — there will be transition bumps. There always are with a migration this size. What I can tell you is I'm managing it daily and we've stayed within budget."
+    </div>
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they press on property taxes</div>
+    <div class="say alt">
+      "I hear you. The Board sets the budget, the Assessor determines values, the state provides the formula, and I'm the one who runs the calculation and certifies the levy. I don't set the budget and I don't set the values — but I make sure the math is right. We've held our own office costs flat while modernizing systems that were two decades out of date."
+    </div>
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they push further — "what about the rest of the county?"</div>
+    <div class="say alt">
+      "The Clerk puts the recommended budget together for every county department — not just my own. I've sent department budgets back for revision before forwarding them to the Commissioners. The budget officer role exists to be an independent check, and I take that seriously."
+    </div>
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== COURTS ========== -->
+<div class="card" id="courts">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Courts / Legal</h2>
+  <div class="say">
+    "We run court operations for the Fifth Judicial District here in Blaine County. My team handles caseloads that peer counties staff at significantly higher levels — and they do it well. That's something I'm proud of."
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== RECORDING ========== -->
+<div class="card" id="recording">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Recording / Property</h2>
+  <div class="say">
+    "Every deed, every lien, every mortgage recorded in Blaine County comes through our office. Title companies depend on us. We've modernized those systems and the feedback from the industry has been strong."
+  </div>
+  <div class="followup">
+    <div class="followup-label">If they work in title/real estate and already noticed</div>
+    <div class="say alt">
+      "That's great to hear — we've worked hard on that. The recording side doesn't get a lot of attention, but it matters to the people who use it every day."
+    </div>
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== DON'T KNOW ========== -->
+<div class="card" id="dontknow">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Nothing Specific</h2>
+  <p class="note">Read the room — homeowner vs. younger renter.</p>
+  <div class="say">
+    "That's fair — most people don't think about the Clerk's office until they need it. If you've ever voted, served on a jury, bought a house, or paid property taxes here, my office was part of that. I've spent four years making sure those systems work well. I'd love your support in the May 19 primary."
+  </div>
+  <div class="followup">
+    <div class="followup-label">Young / renter variant</div>
+    <div class="say alt">
+      "That's fair — most people don't think about the Clerk's office until they need it. If you've ever voted here, my office ran that election. And if you care about whether this valley stays affordable, the county budget is where that starts — I'm the one who builds it. I'd love your support in the May 19 primary."
+    </div>
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They warmed up → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== OUTSIDE SCOPE ========== -->
+<div class="card" id="outside">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Topic Response</div>
+  <h2>Not Clerk's Office</h2>
+  <p class="note">Roads, water, schools, housing — listen, connect if you can, don't pretend you can fix it.</p>
+  <div class="say">
+    "That's not something the Clerk's office handles directly — but as budget officer, the funding for that flows through the budget I put together. I hear you that it matters."
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== OPPONENT ========== -->
+<div class="card" id="opponent">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Situation</div>
+  <h2>They Mention the Opponent</h2>
+  <div class="warn">Do not name Cieslik. Do not attack. Pivot to record. If pressed twice, hold the line.</div>
+  <div class="say">
+    "I don't think this job benefits from a learning curve right now. We're mid-implementation on a major project. I want to land it."
+  </div>
+  <div class="followup">
+    <div class="followup-label">Lighter version (casual, barely-curious mention)</div>
+    <div class="say alt">
+      "Yeah, there's a primary — that's how it should work. I'm focused on finishing what I started."
+    </div>
+  </div>
+  <div class="followup">
+    <div class="followup-label">"Pick one thing" question</div>
+    <div class="say alt">
+      "Modernizing the county's financial systems. We were running on a platform from the early 2000s. The replacement goes live this summer. And the most important thing ahead is landing that implementation — new system, trained staff, clean data — and then using it to give the public real visibility into county finances."
+    </div>
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They seem supportive → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== PARTY ID ========== -->
+<div class="card" id="partyid">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Situation</div>
+  <h2>Party ID Came Up</h2>
+  <div class="branches" style="margin-top:0;">
+    <button class="branch-btn" onclick="go('unaffiliated')">Unaffiliated / Independent</button>
+    <button class="branch-btn" onclick="go('republican')">Registered Republican</button>
+    <button class="branch-btn" onclick="go('strong')">Registered Democrat → Ask sequence</button>
+  </div>
+</div>
+
+<!-- ========== UNAFFILIATED ========== -->
+<div class="card" id="unaffiliated">
+  <button class="back-btn" onclick="go('partyid')">Back</button>
+  <div class="card-label">Party ID</div>
+  <h2>Unaffiliated / Independent</h2>
+  <div class="tip">This voter can vote in the Democratic primary with zero friction. The Democratic ballot is the ONLY partisan primary they can participate in without affiliating. Frame it as a gift, not a request.</div>
+  <div class="say">
+    "Actually, that works in your favor here. The Republican primary is closed — you'd have to register Republican to vote in it. But the Democratic primary is open to everyone. You just ask for the ballot. The County Clerk is a nonpartisan job in practice — courts, elections, budgets, public records. I'd be honored to have your support."
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('strong')">They're warm → Ask sequence</button>
+    <button class="branch-btn" onclick="go('exit')">Wrap up → Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== REPUBLICAN ========== -->
+<div class="card" id="republican">
+  <button class="back-btn" onclick="go('partyid')">Back</button>
+  <div class="card-label">Party ID</div>
+  <h2>Registered Republican</h2>
+  <div class="tip">You're asking them to choose your ballot over their party's. Be lighter. Plant the seed. Don't push.</div>
+  <div class="say">
+    "I appreciate that. Idaho's Democratic primary is open — any registered voter can request a Democratic ballot without changing their registration. The County Clerk is a nonpartisan job in practice: courts, elections, budgets, public records. I'd be honored to have your support regardless of party. But either way, thanks for your time."
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('exit')">Graceful exit</button>
+    <button class="branch-btn" onclick="go('bridge')">Back to bridge</button>
+  </div>
+</div>
+
+<!-- ========== COUNTY EMPLOYEE ========== -->
+<div class="card" id="countyemp">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Situation</div>
+  <h2>County Employee</h2>
+  <p class="note">Name the dynamic. Don't pretend the power relationship isn't there.</p>
+  <div class="say">
+    "I appreciate that — and I know this is a little different when you work for the county. I'm not here as your boss's boss. I'm here as a candidate asking for your vote. If that's uncomfortable, I'll just leave a card and move on."
+  </div>
+  <div class="warn">Don't ask county employees for yard signs, volunteer commitments, or public endorsements. A card and a thank-you is enough.</div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('exit')">Leave a card → Graceful exit</button>
+  </div>
+</div>
+
+<!-- ========== STRONG SUPPORTER — ASK SEQUENCE ========== -->
+<div class="card" id="strong">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Strong Supporter</div>
+  <h2>The Ask Sequence</h2>
+  <p class="note">Work through these in order. Read the room — skip what doesn't fit.</p>
+
+  <div class="say" style="border-left-color: var(--red);">
+    "That means a lot — thank you."
+  </div>
+
+  <hr>
+  <div class="followup-label">1. Yard Sign</div>
+  <div class="say">
+    "Would you be willing to put a yard sign in your yard? It makes a real difference — people see a name in their neighbor's yard, it sticks."
+  </div>
+  <p class="note">If yes → "I'll get one to you as soon as they're ready." Log name + address.</p>
+
+  <hr>
+  <div class="followup-label">2. Endorsement</div>
+  <p class="note">Best for longtime residents, community leaders, business owners. Read the room.</p>
+  <div class="say">
+    "One more thing — would you be comfortable lending your name as an endorser? I'm putting together a list of community members who support my re-election. It could be as simple as your name on a list, or if you're up for it, a short letter to the Mountain Express."
+  </div>
+  <p class="note">If yes → note name, phone/email, name-only or letter. Follow up within a week.<br>If hesitant → "No pressure at all. Think about it — my email's on the card."</p>
+
+  <hr>
+  <div class="followup-label">3. $1 Grassroots Ask</div>
+  <div class="say">
+    "And if you want to chip in, even a dollar keeps this campaign going."
+  </div>
+  <p class="note">Show QR code on phone. "Scan that and you're done."</p>
+
+  <hr>
+  <div class="followup-label">4. Close</div>
+  <div class="say">
+    "Mention my name to a neighbor or two — word of mouth is everything in a race like this. Early voting starts April 27. If you won't be around, you can request an absentee ballot through May 8 at VoteIdaho.gov."
+  </div>
+  <p class="note">Hand palm card. Log as strong supporter.</p>
+  <p class="note">If they offer to donate: "Thank you — the website has everything: grahamforblaine.com."<br>Checks: Graham for Blaine, PO Box 395, Hailey, ID 83333</p>
+
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('start')">Done — reset for next door</button>
+  </div>
+</div>
+
+<!-- ========== GRACEFUL EXIT ========== -->
+<div class="card" id="exit">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Wrap Up</div>
+  <h2>Graceful Exit</h2>
+  <div class="say">
+    "I appreciate your time. Here's a card with my info — the QR code goes right to my website. Early voting starts April 27, and if you won't be around, you can request an absentee ballot through May 8 at VoteIdaho.gov. Primary is May 19. Thanks for talking with me."
+  </div>
+  <p class="note">Hand the palm card. Smile. Walk away clean.</p>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('start')">Next door</button>
+  </div>
+</div>
+
+<!-- ========== NO ANSWER ========== -->
+<div class="card" id="noanswer">
+  <button class="back-btn" onclick="go('knock')">Back</button>
+  <div class="card-label">No Answer</div>
+  <h2>Leave a Door Hanger</h2>
+  <p class="note">Write in the writable strip. Keep it short and personal. Use their name if it's on your list.</p>
+  <div class="say">
+    "Sorry I missed you — Stephen Graham, your County Clerk. Hope to earn your vote May 19!"
+  </div>
+  <div class="say alt">
+    "Stopped by to say hello. I'd love to hear what matters to you — info@grahamforblaine.com"
+  </div>
+  <div class="say alt">
+    "[Name] — thanks for being a voter. Hope to connect soon. — Stephen"
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('start')">Next door</button>
+  </div>
+</div>
+
+<!-- ========== HOSTILE ========== -->
+<div class="card" id="hostile">
+  <button class="back-btn" onclick="go('bridge')">Back to topics</button>
+  <div class="card-label">Situation</div>
+  <h2>Hostile / Not Interested</h2>
+  <div class="say">
+    "I understand. Thanks for your time — have a good day."
+  </div>
+  <p class="note">Walk away. Don't engage. Don't argue. Log in MiniVAN and move on.</p>
+  <div class="warn">
+    Never argue at a door. Never stay longer than 2 minutes. Never bad-mouth anyone. Never talk national politics. Never promise anything outside the Clerk's office.
+  </div>
+  <div class="branches" style="margin-top:1.25rem;">
+    <button class="branch-btn" onclick="go('start')">Next door</button>
+  </div>
+</div>
+
+<script>
+const history = [];
+function go(id) {
+  const current = document.querySelector('.card.active');
+  if (current) {
+    history.push(current.id);
+    current.classList.remove('active');
+  }
+  const next = document.getElementById(id);
+  next.classList.add('active');
+  window.scrollTo(0, 0);
+  // Update breadcrumb
+  const labels = {
+    start: 'Start', knock: 'Knock', bridge: 'Bridge', elections: 'Elections',
+    budget: 'Budget', courts: 'Courts', recording: 'Recording', dontknow: 'General',
+    outside: 'Outside Scope', opponent: 'Opponent', partyid: 'Party ID',
+    unaffiliated: 'Unaffiliated', republican: 'Republican', countyemp: 'County Emp',
+    strong: 'Ask Sequence', exit: 'Exit', noanswer: 'No Answer', hostile: 'Hostile'
+  };
+  document.getElementById('crumb').textContent = labels[id] || id;
+}
+</script>
+</body>
+</html>
