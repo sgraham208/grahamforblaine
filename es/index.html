@@ -884,6 +884,80 @@
     @media (prefers-color-scheme: dark) {
       .signup-status.success { color: #6bc785; }
     }
+    /* ===== SMS Opt-in Styles ===== */
+    .sms-opt-in-group {
+      margin-top: var(--space-sm);
+      text-align: left;
+    }
+    .sms-opt-in-group label.sms-consent-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.5;
+      cursor: pointer;
+      margin-top: var(--space-xs);
+    }
+    .sms-opt-in-group input[type="checkbox"] {
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      accent-color: var(--color-navy);
+    }
+    .sms-opt-in-group input[type="tel"] {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      padding: 0.75rem var(--space-sm);
+      border: 2px solid var(--color-sand-dark);
+      border-radius: var(--border-radius);
+      background: var(--color-white);
+      color: var(--color-text);
+      min-height: 2.75rem;
+      width: 100%;
+      transition: border-color 0.2s ease;
+    }
+    .sms-opt-in-group input[type="tel"]:focus {
+      outline: none;
+      border-color: var(--color-blue);
+      box-shadow: 0 0 0 3px rgba(46, 92, 138, 0.15);
+    }
+    .sms-opt-in-group input[type="tel"]::placeholder {
+      color: var(--color-text-light);
+    }
+    .sms-disclosure {
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+      line-height: 1.5;
+      margin-top: var(--space-xs);
+      text-align: left;
+    }
+    .sms-disclosure a {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      .sms-opt-in-group input[type="tel"] {
+        border-color: #3a3a3a;
+      }
+      .sms-disclosure a {
+        color: var(--color-sky);
+      }
+    }
+    /* ===== Footer Policy Links ===== */
+    .footer-policy-links {
+      margin-top: var(--space-sm);
+      font-size: var(--text-sm);
+    }
+    .footer-policy-links a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer-policy-links a:hover {
+      color: #ffffff;
+    }
     .involve-divider {
       width: 3rem;
       border: none;
@@ -1293,14 +1367,23 @@
       <h2 class="section-heading" id="participar-heading">Participe</h2>
       <p>Sea voluntario, inscríbase para recibir noticias, o simplemente diga hola. Cada apoyo cuenta.</p>
 
-      <!-- Mailchimp Embedded Signup Form -->
-      <div class="signup-form-wrap" role="form" aria-label="Inscripción para noticias de la campaña">
+      <!-- Mailchimp Embedded Signup Form — TCR Compliant -->
+      <div class="signup-form-wrap" role="form" aria-label="Inscripción para noticias y mensajes de texto de la campaña">
         <label class="signup-label" for="mc-email">Reciba noticias de la campaña</label>
         <form action="https://grahamforblaine.us14.list-manage.com/subscribe/post?u=4522843f36323ac7f396cc054&amp;id=2cd8b5bb77&amp;f_id=00d846e5f0" method="post" id="mc-signup-form" target="_blank">
           <div class="signup-form-fields">
             <input type="email" name="EMAIL" id="mc-email" placeholder="usted@ejemplo.com" required aria-required="true" autocomplete="email" />
             <button type="submit" class="btn-signup" name="subscribe">Suscribirse</button>
           </div>
+          <!-- Optional phone number + SMS opt-in -->
+          <div class="sms-opt-in-group">
+            <input type="tel" name="PHONE" id="mc-phone" placeholder="Celular (opcional)" autocomplete="tel" aria-label="Número de celular (opcional)" />
+            <label class="sms-consent-label" for="sms-consent">
+              <input type="checkbox" name="SMS_CONSENT" id="sms-consent" value="yes" />
+              <span>Sí, deseo recibir mensajes de texto de Graham for Blaine</span>
+            </label>
+          </div>
+          <p class="sms-disclosure">Al proporcionar su número de teléfono y marcar la casilla, usted consiente recibir mensajes de texto de campaña y recaudación de fondos, incluidos textos automáticos, de Graham for Blaine. Responda HELP para ayuda, STOP para cancelar. La frecuencia de mensajes puede variar. Pueden aplicar tarifas de mensajes y datos. Los datos de consentimiento de SMS no se venderán, alquilarán ni compartirán. <a href="/mobile-messaging-terms.html">Términos de mensajería móvil</a>. <a href="/privacy-policy.html">Política de privacidad</a>.</p>
           <!-- Honeypot field — prevents bot signups -->
           <div aria-hidden="true" style="position: absolute; left: -5000px;">
             <input type="text" name="b_4522843f36323ac7f396cc054_2cd8b5bb77" tabindex="-1" value="" />
@@ -1369,6 +1452,7 @@
     Solo registros. Sin manipulación.
   </p>
   <p>Pagado por Graham for Blaine</p>
+  <p class="footer-policy-links"><a href="/privacy-policy.html">Política de privacidad</a> &middot; <a href="/mobile-messaging-terms.html">Términos de mensajería</a></p>
 </footer>
 
 <!-- ===== Mobile Nav Toggle Script ===== -->
@@ -1418,14 +1502,4 @@
     } else if (daysToElection === 1) {
       el.textContent = 'Mañana es el día de elecciones.';
     } else if (daysToEarly <= 0) {
-      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de elecciones.';
-    } else if (daysToEarly === 1) {
-      el.textContent = 'La votación anticipada comienza mañana.';
-    } else {
-      el.textContent = 'Faltan ' + daysToElection + ' días para el día de elecciones.';
-    }
-  })();
-</script>
-
-</body>
-</html>
+      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de eleccione
