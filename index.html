@@ -1426,7 +1426,7 @@
           <div class="sms-opt-in-group">
             <input type="tel" name="PHONE" id="mc-phone" placeholder="Cell phone (optional)" autocomplete="tel" aria-label="Cell phone number (optional)" />
             <label class="sms-consent-label" for="sms-consent">
-              <input type="checkbox" name="SMS_CONSENT" id="sms-consent" value="yes" />
+              <input type="checkbox" name="SMSCONSENT" id="sms-consent" value="yes" />
               <span>Yes, I would like to receive text messages from Graham for Blaine</span>
             </label>
           </div>
@@ -1539,4 +1539,13 @@
     } else if (daysToElection === 1) {
       el.textContent = 'Tomorrow is Election Day.';
     } else if (daysToEarly <= 0) {
-      el.textContent = 'Early voting is open now \u2014 ' + daysToE
+      el.textContent = 'Early voting is open now \u2014 ' + daysToElection + ' days until Election Day.';
+    } else if (daysToEarly === 1) {
+      el.textContent = 'Early voting starts tomorrow.';
+    } else {
+      el.textContent = daysToElection + ' days until Election Day.';
+    }
+  })();
+</script>
+</body>
+</html>
