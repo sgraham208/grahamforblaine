@@ -1379,7 +1379,7 @@
           <div class="sms-opt-in-group">
             <input type="tel" name="PHONE" id="mc-phone" placeholder="Celular (opcional)" autocomplete="tel" aria-label="Número de celular (opcional)" />
             <label class="sms-consent-label" for="sms-consent">
-              <input type="checkbox" name="SMS_CONSENT" id="sms-consent" value="yes" />
+              <input type="checkbox" name="SMSCONSENT" id="sms-consent" value="yes" />
               <span>Sí, deseo recibir mensajes de texto de Graham for Blaine</span>
             </label>
           </div>
@@ -1502,4 +1502,14 @@
     } else if (daysToElection === 1) {
       el.textContent = 'Mañana es el día de elecciones.';
     } else if (daysToEarly <= 0) {
-      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de eleccione
+      el.textContent = 'La votación anticipada está abierta — faltan ' + daysToElection + ' días para el día de elecciones.';
+    } else if (daysToEarly === 1) {
+      el.textContent = 'La votación anticipada comienza mañana.';
+    } else {
+      el.textContent = 'Faltan ' + daysToElection + ' días para el día de elecciones.';
+    }
+  })();
+</script>
+
+</body>
+</html>
