@@ -633,6 +633,52 @@
       color: var(--color-text-light);
       flex-basis: 100%;
     }
+    /* ===== Endorsements Section ===== */
+    .endorsements-intro {
+      max-width: var(--max-width-narrow);
+      margin: 0 auto var(--space-lg);
+      text-align: center;
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+    .endorsers-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: var(--max-width-narrow);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem 2rem;
+    }
+    @media (min-width: 40rem) {
+      .endorsers-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 64rem) {
+      .endorsers-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .endorsers-list li {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-navy);
+      font-weight: 600;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--color-sand-dark);
+      line-height: 1.4;
+    }
+    .endorsers-footnote {
+      max-width: var(--max-width-narrow);
+      margin: var(--space-lg) auto 0;
+      text-align: center;
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      font-style: italic;
+      line-height: 1.5;
+    }
     /* ===== Donate Section ===== */
     .donate-section {
       background: var(--color-sand);
@@ -1038,6 +1084,10 @@
     /* ===== Dark mode component overrides ===== */
     @media (prefers-color-scheme: dark) {
       .built-item h3 { color: #e0d8cc; }
+      .endorsers-list li {
+        color: #e0d8cc;
+        border-bottom-color: #3a3a3a;
+      }
       .role-card {
         border-color: #3a3a3a;
         border-left-color: var(--color-blue);
@@ -1113,6 +1163,7 @@
       <li><a href="#sobre">Sobre Stephen</a></li>
       <li><a href="#logros">Logros</a></li>
       <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#respaldos">Respaldos</a></li>
       <li><a href="#donar">Donar</a></li>
       <li><a href="#participar">Participar</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -1343,6 +1394,55 @@
           <span class="news-date">2021</span>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ===== Respaldos / Endorsements =====
+       TODO: Have translator verify heading ("Respaldos"), intro sentence, and footnote disclaimer.
+       Names do not require translation. -->
+  <section id="respaldos" class="section-pad bg-cream" aria-labelledby="respaldos-heading">
+    <div class="section-inner">
+      <h2 class="section-heading" id="respaldos-heading">Respaldos</h2>
+      <p class="endorsements-intro">Los siguientes residentes del Condado de Blaine respaldan a Stephen Graham para Secretario del Condado.</p>
+      <ul class="endorsers-list" role="list">
+        <li>Karen Bliss</li>
+        <li>Shelly and Jim Bronson</li>
+        <li>Barbara and Nat Campbell</li>
+        <li>Aimee Christensen</li>
+        <li>Patti and Jay Dorr</li>
+        <li>Sandra and John Flattery</li>
+        <li>Lynn and Rick Flickinger</li>
+        <li>Marie Fogli</li>
+        <li>Susan and Ron Green</li>
+        <li>Jacob and Jeanne Greenberg</li>
+        <li>Dave Gwinn</li>
+        <li>Kim Havens</li>
+        <li>Lynne and Steve Heidel</li>
+        <li>Will Heidel</li>
+        <li>Brad Hershey</li>
+        <li>Gary Hoffman</li>
+        <li>Aaron Jones</li>
+        <li>Kaye and Gerry Kearns</li>
+        <li>Gary Kuchcinski</li>
+        <li>Susan Larson</li>
+        <li>Robin Leavitt</li>
+        <li>Ken Lewis and Joyce Hart</li>
+        <li>Scott Lewis</li>
+        <li>Don and Marcia Liebich</li>
+        <li>Patti Lindberg</li>
+        <li>Dede Morris</li>
+        <li>Karen Pederson</li>
+        <li>Samantha Puglia</li>
+        <li>Pamela Ridgway</li>
+        <li>Bev and Brent Robinson</li>
+        <li>Herbert Romero</li>
+        <li>Jeff Rose</li>
+        <li>Barbara Thrasher</li>
+        <li>Ellen Usenik</li>
+        <li>Nancy Warren</li>
+        <li>Barbara Wilson</li>
+      </ul>
+      <p class="endorsers-footnote">Los respaldos reflejan opiniones personales y no se realizan en nombre de ninguna organización, empleador, o cargo con el que un firmante pueda estar afiliado.</p>
     </div>
   </section>
 
